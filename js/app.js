@@ -47,8 +47,8 @@
 
 //Objectives:
 // - Mobile friendly
-// normal mode: provide images,easier questions and hints for them.
-// hard mode: no hints, blacked out images, harder questions
+//  normal mode: provide images,easier questions and hints for them.
+//  hard mode: no hints, blacked out images, harder questions
 
 
 
