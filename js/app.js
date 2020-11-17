@@ -1,28 +1,12 @@
-
 /*-------------------------------- Constants --------------------------------*/
-
-
 
 /*-------------------------------- Variables --------------------------------*/
 
-
-
 /*------------------------ Cached Element References ------------------------*/
-
-
 
 /*----------------------------- Event Listeners -----------------------------*/
 
-
-
 /*-------------------------------- Functions --------------------------------*/
-
-
-
-
-
-
-
 
 //Psuedo code:
 // - Create the structure of the home page:
@@ -49,8 +33,3 @@
 // - Mobile friendly
 //  normal mode: provide images,easier questions and hints for them.
 //  hard mode: no hints, blacked out images, harder questions
-
-
-
-
-
