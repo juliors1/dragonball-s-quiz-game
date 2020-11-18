@@ -31,3 +31,4 @@ How to play: Answer the 10 questions about the characters and items. You must an
 - [ ] adding a timer
 - [ ] animate title from left
 - [ ] add sound
+- [ ] share on instagram button

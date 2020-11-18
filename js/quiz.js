@@ -1,12 +1,98 @@
 /*-------------------------------- Constants --------------------------------*/
 
 /*-------------------------------- Variables --------------------------------*/
-
+let currentQuestion = {};
+let correctAnswer = true;
+let result = 0;
+let questionCount = 0;
+let remainingQuestion = [];
+let = [
+  {
+    question: "Who is this character?",
+    answer1: "Goku",
+    answer2: "Vegeta",
+    answer3: "Goten",
+    answer4: "Trunks",
+    answer: 1,
+  },
+  {
+    question: "Who is this character?",
+    answer1: "Pan",
+    answer2: "Jaco",
+    answer3: "Jiren",
+    answer4: "Whis",
+    answer: 3,
+  },
+  {
+    question: "Who is this character?",
+    answer1: "Whis",
+    answer2: "Broly",
+    answer3: "Jiren",
+    answer4: "Master Roshi",
+    answer: 2,
+  },
+  {
+    question: "Who is this character?",
+    answer1: "Raditz",
+    answer2: "Vegeta",
+    answer3: "Andriod 17",
+    answer4: "Cell",
+    answer: 2,
+  },
+  {
+    question: "Who is this character?",
+    answer1: "Goten",
+    answer2: "Kid Buu",
+    answer3: "Jiren",
+    answer4: "Gohan",
+    answer: 4,
+  },
+  {
+    question: "Who is this character?",
+    answer1: "Frieza",
+    answer2: "Cooler",
+    answer3: "Freiza",
+    answer4: "Andriod 18",
+    answer: 1,
+  },
+  {
+    question: "Who is the God of Destruction in the sixth universe?",
+    answer1: "Heles",
+    answer2: "Iwan",
+    answer3: "Sidra",
+    answer4: "Champa",
+    answer: 4,
+  },
+  {
+    question: "Who is the God of Destruction in the seventh universe?",
+    answer1: "Quitela",
+    answer2: "Giin",
+    answer3: "Beerus",
+    answer4: "Sidra",
+    answer: 3,
+  },
+  {
+    question: "What is the name of Gohan's daughter",
+    answer1: "Bulla",
+    answer2: "Pan",
+    answer3: "Hailey",
+    answer4: "Dolly",
+    answer: 2,
+  },
+  {
+    question: "Who's the strongest character in Dragon Ball Super?",
+    answer1: "Vados",
+    answer2: "Whis",
+    answer3: "Grand Priest",
+    answer4: "Zeno",
+    answer: 4,
+  },
+];
 /*------------------------ Cached Element References ------------------------*/
 const answers = Array.from(document.querySelectorAll(".answer-text"));
 const question = document.getElementById("question");
 const resultText = document.getElementById("results");
-const quizText= document.getElementById("quizTxt");
+const quizText = document.getElementById("quizTxt");
 const compeleteBar = document.getElementById("quizBarComplete");
 
 /*----------------------------- Event Listeners -----------------------------*/
@@ -14,7 +100,6 @@ const compeleteBar = document.getElementById("quizBarComplete");
 /*-------------------------------- Functions --------------------------------*/
 
 //Psuedo code:
-//
 // - Create an music ID icon button for music option
 // - Create an instruction ID icon button
 // - Provide a hint for the user
