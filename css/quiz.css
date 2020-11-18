@@ -27,68 +27,48 @@ body {
 }
 
 #quizDisplay {
-  display:flex;
-  justify-content:space-between;
+  display: flex;
+  justify-content: space-between;
 }
-#quizBar{
-  width:20rem;
-  height:3rem;
+#quizBar {
+  width: 20rem;
+  height: 3rem;
   border: 0.5rem solid red;
   border-radius: 5rem;
-  margin-top:2rem;
+  margin-top: 2rem;
   overflow: hidden;
-
 }
-.quiz-material{
+#quizBarComplete {
+  height: 100%;
+  background-color: red;
+  width: 0%;
+}
+.quiz-material {
   text-align: center;
-  font-size:2.5rem;
+  font-size: 2.5rem;
 }
 
 .quiz-main-text {
   text-align: center;
 }
 
-
-
 .answer-choice {
   color: #fff;
   padding: 2rem 2.8rem;
 }
-.answer-text{
-  width:100%;
-  padding:1.8rem;
-
+.answer-text {
+  width: 100%;
+  padding: 1.8rem;
 }
 
 
-
-
-
-
-
-.incorrect {
-background-color: ;
-}
 
 .correct {
-
+  background-color: lime;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
   .answer-container {
-min-width: 40rem;
-
+    min-width: 40rem;
   }
 }
