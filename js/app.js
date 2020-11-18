@@ -9,8 +9,7 @@ const startBtn = document.getElementById("startButton");
 /*-------------------------------- Functions --------------------------------*/
 
 //Psuedo code:
-// - Create the structure of the home page:
-// - Create id container for the title (Use Sayian Font)
+// 
 // - Create an music ID icon button for music option
 // - Create an instruction ID icon button
 // - Provide a hint for the user

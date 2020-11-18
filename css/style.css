@@ -30,7 +30,7 @@ body {
 }
 #container {
   width: 100%;
-  height: 800px;
+  height: 100vh;
   background: url(https://wallpaperaccess.com/full/957416.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -59,9 +59,12 @@ h1 {
   border: 3px solid #000;
   cursor: pointer;
   text-decoration: none;
+  color:#000;
+  background-color: white;
 }
 .start-button:hover {
-  background-color: #ffff00;
+  background-color: #000;
+  text-decoration: none;
 }
 button:focus {
   outline: 0;

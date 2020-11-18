@@ -1,11 +1,37 @@
 body {
-  background:url(https://wallpaperaccess.com/full/3417133.png);
+  background: url(https://wallpaperaccess.com/full/3417133.png);
   width: 100%;
-  height: 600px;
+  height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  color:#FFF;
+  color: #fff;
+}
+
+.answer-container {
+  display: flex;
+  width: 100%;
+  min-width: 80rem;
+  border-radius: 5px;
+  background-color: red;
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.answer-container:hover {
+  cursor: pointer;
+  box-shadow: 0 0.7rem 0.7rem 0 rgba(255, 0, 0, 0.5);
+  transform: scale(1.03);
+  transform: transform 100ms;
+}
+
+.answer-choice {
+  color: #fff;
+  padding: 2rem 2.8rem;
+}
+.answer-text{
+  width:100%;
+  padding:1.8rem;
 
 }
