@@ -26,6 +26,30 @@ body {
   transform: transform 100ms;
 }
 
+#quizDisplay {
+  display:flex;
+  justify-content:space-between;
+}
+#quizBar{
+  width:20rem;
+  height:3rem;
+  border: 0.5rem solid red;
+  border-radius: 5rem;
+  margin-top:2rem;
+  overflow: hidden;
+
+}
+.quiz-material{
+  text-align: center;
+  font-size:2.5rem;
+}
+
+.quiz-main-text {
+  text-align: center;
+}
+
+
+
 .answer-choice {
   color: #fff;
   padding: 2rem 2.8rem;
@@ -39,6 +63,16 @@ body {
 
 
 
+
+
+
+.incorrect {
+background-color: ;
+}
+
+.correct {
+
+}
 
 
 
