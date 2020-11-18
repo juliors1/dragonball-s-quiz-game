@@ -58,10 +58,22 @@ h1 {
   font-size: 2rem;
   border: 3px solid #000;
   cursor: pointer;
+  text-decoration: none;
 }
-
-
+.start-button:hover {
+  background-color: #ffff00;
+}
+button:focus {
+  outline: 0;
+}
 .text {
   font-size: 2rem;
   text-align: center;
+}
+.icon {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  font-size: 5rem;
+  color: rgb(232, 119, 119);
 }

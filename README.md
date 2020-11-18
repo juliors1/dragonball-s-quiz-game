@@ -28,4 +28,6 @@ How to play: Answer the 10 questions about the characters and items. You must an
 - [ ] mobile friendly
 - [ ] add dark mode
 - [ ] showing the percentage of your score
-- [ ] adding a timer 
+- [ ] adding a timer
+- [ ] animate title from left
+- [ ] add sound
