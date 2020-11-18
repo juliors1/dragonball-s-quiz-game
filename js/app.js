@@ -3,7 +3,7 @@
 /*-------------------------------- Variables --------------------------------*/
 
 /*------------------------ Cached Element References ------------------------*/
-
+const startBtn = document.getElementById("startButton");
 /*----------------------------- Event Listeners -----------------------------*/
 
 /*-------------------------------- Functions --------------------------------*/
@@ -28,6 +28,7 @@
 // - Have the answers as multiple choice buttons for them to choose from.
 // - Create an array of characters and an array of items.
 // - Retake Quiz: add icon button
+// - next question function
 
 //Objectives:
 // - Mobile friendly

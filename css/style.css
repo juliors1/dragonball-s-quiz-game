@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Goldman:wght@700&display=swap");
+
 html {
   box-sizing: border-box;
 }
@@ -22,5 +24,44 @@ body {
   /* Use a system font, if none are available use an available sans-sarif   font */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: "Goldman", cursive;
   margin: 0;
+  padding: 0;
+}
+#container {
+  width: 100%;
+  height: 800px;
+  background: url(https://wallpaperaccess.com/full/957416.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.title {
+  width: 100%;
+  background-color: rgb(232, 119, 119);
+  position: absolute;
+  top: 400px;
+  border: 8px solid #000;
+}
+h1 {
+  font-size: 5rem;
+  text-align: center;
+}
+.container-start {
+  text-align: center;
+}
+.start-button {
+  width: 250px;
+  height: 50px;
+  font-family: "Goldman", cursive;
+  font-size: 2rem;
+  border: 3px solid #000;
+  cursor: pointer;
+}
+
+
+.text {
+  font-size: 2rem;
+  text-align: center;
 }
