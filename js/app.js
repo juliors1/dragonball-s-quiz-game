@@ -9,7 +9,7 @@ const startBtn = document.getElementById("startButton");
 /*-------------------------------- Functions --------------------------------*/
 
 //Psuedo code:
-// 
+//
 // - Create an music ID icon button for music option
 // - Create an instruction ID icon button
 // - Provide a hint for the user
@@ -17,7 +17,7 @@ const startBtn = document.getElementById("startButton");
 // - Provide a text showing the number of question they are currently at out of the total.
 // - If wrong show a description of every character or item and provide the wrong with an X icon colored red and the correct answer colored green.
 // - Prevent user from being able to answer the next question they have not answered the current one.
-// - If and else statement determining whether they have failed or not. A score of 7/10 and above is a pass and anything below is a fail.
+// - If and else statement determining whether they have failed or not. A score of 6/10 and above is a pass and anything below is a fail.
 // - End function to display their result at the end of the quiz. If they failed game over music will go.
 // - If they score perfect provide a sound effect with and image saying "PERFECT".
 // - Create the structure of the home page:

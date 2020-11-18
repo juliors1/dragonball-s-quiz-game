@@ -35,3 +35,26 @@ body {
   padding:1.8rem;
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:768px) {
+  .answer-container {
+min-width: 40rem;
+
+  }
+}
