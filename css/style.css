@@ -80,3 +80,9 @@ button:focus {
   font-size: 5rem;
   color: rgb(232, 119, 119);
 }
+
+@media screen and (max-height: 1080px) {
+  .title{
+    top:350px;
+  }
+}

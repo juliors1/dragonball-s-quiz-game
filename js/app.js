@@ -4,6 +4,7 @@
 
 /*------------------------ Cached Element References ------------------------*/
 const startBtn = document.getElementById("startButton");
+
 /*----------------------------- Event Listeners -----------------------------*/
 
 /*-------------------------------- Functions --------------------------------*/

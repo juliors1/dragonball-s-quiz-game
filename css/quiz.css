@@ -31,7 +31,7 @@ body {
   justify-content: space-between;
 }
 #quizBar {
-  width: 20rem;
+  width: 30rem;
   height: 3rem;
   border: 0.5rem solid red;
   border-radius: 5rem;
@@ -48,7 +48,7 @@ body {
   font-size: 2.5rem;
 }
 
-.quiz-main-text {
+.quiz-result-text {
   text-align: center;
 }
 
@@ -60,9 +60,6 @@ body {
   width: 100%;
   padding: 1.8rem;
 }
-
-
-
 .correct {
   background-color: lime;
 }
