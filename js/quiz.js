@@ -1,5 +1,6 @@
 /*-------------------------------- Constants --------------------------------*/
-
+const result = 1
+const totalQuestions = 10
 /*-------------------------------- Variables --------------------------------*/
 let currentQuestion = {};
 let correctAnswer = true;
@@ -99,6 +100,14 @@ const compeleteBar = document.getElementById("quizBarComplete");
 
 /*-------------------------------- Functions --------------------------------*/
 
+
+
+
+
+
+
+
+
 //Psuedo code:
 // - Create an music ID icon button for music option
 // - Create an instruction ID icon button
@@ -110,12 +119,6 @@ const compeleteBar = document.getElementById("quizBarComplete");
 // - If and else statement determining whether they have failed or not. A score of 6/10 and above is a pass and anything below is a fail.
 // - End function to display their result at the end of the quiz. If they failed game over music will go.
 // - If they score perfect provide a sound effect with and image saying "PERFECT".
-// - Create the structure of the home page:
-// - Create id container for the title (Use Sayian Font)
-// - Create sound id to have the option of audio or not
-// - create an instruction ID icon button
-// - Have the answers as multiple choice buttons for them to choose from.
-// - Create an array of characters and an array of items.
 // - Retake Quiz: add icon button
 // - next question function
 
