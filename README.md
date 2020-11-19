@@ -26,7 +26,6 @@ How to play: Answer the 10 questions about the characters and items. You must an
 
 - [ ] add more questions
 - [ ] mobile friendly
-- [ ] add dark mode
 - [ ] showing the percentage of your score
 - [ ] adding a timer
 - [ ] animate title from left
