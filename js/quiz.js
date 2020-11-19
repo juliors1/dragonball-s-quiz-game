@@ -1,13 +1,13 @@
 /*-------------------------------- Constants --------------------------------*/
-const result = 1
-const totalQuestions = 10
+const result = 1;
+const totalQuestions = 10;
 /*-------------------------------- Variables --------------------------------*/
 let currentQuestion = {};
 let correctAnswer = true;
 let result = 0;
 let questionCount = 0;
 let remainingQuestion = [];
-let = [
+let questions = [
   {
     question: "Who is this character?",
     answer1: "Goku",
@@ -90,7 +90,7 @@ let = [
   },
 ];
 /*------------------------ Cached Element References ------------------------*/
-const answers = Array.from(document.querySelectorAll(".answer-text"));
+const answers = [...document.querySelectorAll(".answer-text")];
 const question = document.getElementById("question");
 const resultText = document.getElementById("results");
 const quizText = document.getElementById("quizTxt");
@@ -100,13 +100,16 @@ const compeleteBar = document.getElementById("quizBarComplete");
 
 /*-------------------------------- Functions --------------------------------*/
 
+startQuiz = () => {
+  questionCount = 0;
+  remainingQuestion = [...questions];
+  result = 0;
+  nextQuestion()
+};
 
-
-
-
-
-
-
+nextQuestion = () => {
+  if(remainingQuestion.length === 0 || questionCount)
+}
 
 //Psuedo code:
 // - Create an music ID icon button for music option
