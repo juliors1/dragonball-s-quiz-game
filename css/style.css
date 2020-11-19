@@ -73,10 +73,4 @@ button:focus {
   font-size: 2rem;
   text-align: center;
 }
-.icon {
-  display: flex;
-  align-items: flex-end;
-  flex-direction: column;
-  font-size: 5rem;
-  color: rgb(232, 119, 119);
-}
+

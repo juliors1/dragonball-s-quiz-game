@@ -1,7 +1,7 @@
 body {
-  background: url(https://wallpaperaccess.com/full/3417133.png);
+  background: url(https://jkhub.org/screenshots/monthly_01_2018/67de82e1142d50d165e7e6b6ca33dba6-shot0006.jpg);
   width: 100%;
-  height: 100vh;
+  height: 50%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -9,18 +9,18 @@ body {
   color: #fff;
 }
 .container {
-  width: 80%;
-  height:100vh;
+  display:flex;
   margin:0 auto;
+  flex-direction: column;
+  width: 60%;
   background-color:#000;
-
-
+  border: 6px solid #FFF;
 }
 
 .answer-container {
   display: flex;
-  width: 100%;
-  min-width: 80rem;
+  width: 60%;
+flex-direction: row;
   border-radius: 5px;
   background-color: red;
   margin-bottom: 1rem;
@@ -71,7 +71,13 @@ body {
 .correct {
   background-color: lime;
 }
-
+.icon {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  font-size: 5rem;
+  color: rgb(255, 0, 0)
+}
 @media screen and (max-width: 768px) {
   .answer-container {
     min-width: 40rem;

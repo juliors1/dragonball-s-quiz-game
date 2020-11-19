@@ -99,7 +99,7 @@ const compeleteBar = document.getElementById("quizBarComplete");
 /*----------------------------- Event Listeners -----------------------------*/
 
 /*-------------------------------- Functions --------------------------------*/
-
+// Starts Quiz
 startQuiz = () => {
   questionCount = 0;
   remainingQuestion = [...questions];
@@ -107,8 +107,11 @@ startQuiz = () => {
   nextQuestion()
 };
 
+// Continues to the next quesiton
 nextQuestion = () => {
-  if(remainingQuestion.length === 0 || questionCount)
+  if(remainingQuestion.length === 0 || questionCount > totalQuestions) {
+    lo
+  }
 }
 
 //Psuedo code:
