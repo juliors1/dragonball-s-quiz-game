@@ -72,7 +72,7 @@ body {
   border: 5px solid;
   cursor: pointer;
 }
-.next-btn {
+.next-btn, .start-btn{
   font-size: 4rem;
   background-color: #fff;
   cursor: pointer;
@@ -84,7 +84,14 @@ body {
 
 }
 .next-btn:hover {
-  border-color:yellow;
+  border-color:red;
+}
+.start-btn:focus{
+  outline: none;
+
+}
+.start-btn:hover {
+  border-color:red;
 }
 .button-container {
   display:flex;
@@ -93,7 +100,7 @@ body {
 }
 
 .answer:hover {
-  border-color: yellow;
+  border-color: red;
 }
 
 .answer:focus {
@@ -105,4 +112,7 @@ body {
 }
 .answer.correct {
   --background-color: var(--correct-color);
+}
+.hide {
+  display: none;
 }
