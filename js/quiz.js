@@ -1,18 +1,16 @@
 /*-------------------------------- Constants --------------------------------*/
-const result = 1;
-const totalQuestions = 10;
+
 /*-------------------------------- Variables --------------------------------*/
-let currentQuestion = {};
-let correctAnswer = true;
 
 let questions = [
   {
     question: "Who is this character?",
-    answer1: "Goku",
-    answer2: "Vegeta",
-    answer3: "Goten",
-    answer4: "Trunks",
-    answer: 1,
+    answers: [
+      { text: "Goku", correct: true },
+      { text: "Vegeta", correct: false },
+      { text: "Goten", correct: false },
+      { text: "Trunks", correct: false },
+    ],
   },
   {
     question: "Who is this character?",
@@ -90,24 +88,28 @@ let questions = [
 /*------------------------ Cached Element References ------------------------*/
 const question = document.getElementById("question");
 const startBtn = document.getElementById("startBtn");
-const quizText = document.getElementById("quizTxt");
+const qBoxEl = document.getElementById("questionContainer");
 /*----------------------------- Event Listeners -----------------------------*/
-startBtn.addEventListener('click', startQuiz)
+startBtn.addEventListener("click", startQuiz);
 /*-------------------------------- Functions --------------------------------*/
 // Starts Quiz
- function startQuiz() {
-console.log('start!')
-};
+function startQuiz() {
+  startBtn.classList.add("hide");
+  qBoxEl.classList.remove("hide");
+  nextQuestion();
+}
 
-// Select an answer
-selectAnswer = () => {
-
-};
+// Picks an answer
+function answerChoice() {}
 // Continues to the next quesiton
-nextQuestion = () => {
+function nextQuestion() {}
 
 
-};
+
+
+
+
+
 
 //Psuedo code:
 // - Create an music ID icon button for music option

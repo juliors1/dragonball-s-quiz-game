@@ -24,10 +24,11 @@ How to play: Answer the 10 questions about the characters and items. You must an
 
 ## Next Steps:
 
-- [ ] add more questions
+
+- [ ] add sound
 - [ ] mobile friendly
+- [ ] animate title from left
 - [ ] showing the percentage of your score
 - [ ] adding a timer
-- [ ] animate title from left
-- [ ] add sound
-- [ ] share on instagram button
+- [ ] randomize order
+- [ ] add more questions
