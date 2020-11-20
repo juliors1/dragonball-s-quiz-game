@@ -10,53 +10,26 @@
     integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
     crossorigin="anonymous"
   />
-    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/quiz.css" />
     <script defer src="js/quiz.js"></script>
 
   </head>
   <body>
     <div class="icon">
-      <i class="fas fa-volume-up"></i>
+      <i id ="sound"class="fas fa-volume-up"></i>
     </div>
     <div class="container">
-      <div id="quiz" class="quizStyle">
-        <div id="quizDisplay">
-          <div class="quiz-material">
-            <p id="quizTxt" class="quiz-text">
-              Question:
-            </p>
-            <div id="quizBar">
-              <div id="quizBarComplete"></div>
-
-              </div>
-            </div>
-            <div class="quiz-material"></div>
-            <p class="quiz-text">
-              Results:
-            </p>
-            <h1 id="results" class="quiz-result-text">
-              1/10
-            </h1>
-          </div>
-        </div>
-        <h1 id="question">Who is this character?</h1>
-        <div class="answer-container">
-          <p class="answer-choice">A</p>
-          <p class="answer-text" data-choice="1">Answer</p>
-        </div>
-        <div class="answer-container">
-          <p class="answer-choice">B</p>
-          <p class="answer-text" data-choice="2">Answer 2</p>
-        </div>
-        <div class="answer-container">
-          <p class="answer-choice">C</p>
-          <p class="answer-text" data-choice="3">Answer 3</p>
-        </div>
-         <div class="answer-container">
-          <p class="answer-choice">D</p>
-          <p class="answer-text" data-choice="4">Answer 4</p>
-        </div>
+     <div id="questionContainer" class="hide">
+       <div id="question">Question</div>
+       <div id="answerBtn" class=:answer-btn>
+         <button class="answer">A</button>
+         <button class="answer">B</button>
+         <button class="answer">C</button>
+         <button class="answer">D</button>
+       </div>
+     </div>
+     <div class="button-container"></div>
+     <button id ="nextBtn" class="next-btn hide">Next</button>
       </div>
     </div>
   </body>
