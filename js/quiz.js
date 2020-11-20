@@ -4,9 +4,7 @@ const totalQuestions = 10;
 /*-------------------------------- Variables --------------------------------*/
 let currentQuestion = {};
 let correctAnswer = true;
-let result = 0;
-let questionCount = 0;
-let remainingQuestion = [];
+
 let questions = [
   {
     question: "Who is this character?",
@@ -90,29 +88,26 @@ let questions = [
   },
 ];
 /*------------------------ Cached Element References ------------------------*/
-const answers = [...document.querySelectorAll(".answer-text")];
 const question = document.getElementById("question");
-const resultText = document.getElementById("results");
+const startBtn = document.getElementById("startBtn");
 const quizText = document.getElementById("quizTxt");
-const compeleteBar = document.getElementById("quizBarComplete");
-
 /*----------------------------- Event Listeners -----------------------------*/
-
+startBtn.addEventListener('click', startQuiz)
 /*-------------------------------- Functions --------------------------------*/
 // Starts Quiz
-startQuiz = () => {
-  questionCount = 0;
-  remainingQuestion = [...questions];
-  result = 0;
-  nextQuestion()
+ function startQuiz() {
+console.log('start!')
 };
 
+// Select an answer
+selectAnswer = () => {
+
+};
 // Continues to the next quesiton
 nextQuestion = () => {
-  if(remainingQuestion.length === 0 || questionCount > totalQuestions) {
-    lo
-  }
-}
+
+
+};
 
 //Psuedo code:
 // - Create an music ID icon button for music option
