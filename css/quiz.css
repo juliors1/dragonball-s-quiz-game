@@ -19,6 +19,8 @@ html {
   in most browser configurations this will be 10px */
 :root {
   font-size: 62.5%;
+  --check-correct:lime;
+  --check-wrong: red;
 }
 
 body {
@@ -28,21 +30,65 @@ body {
   background: url(https://jkhub.org/screenshots/monthly_01_2018/67de82e1142d50d165e7e6b6ca33dba6-shot0006.jpg);
   margin: 0;
   padding: 0;
-  width:100vw;
   display: flex;
+  width: 100vw;
+  height: 100vh;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.question-text {
+  font-size: 4rem;
   color: #fff;
 }
-
-.icon {
+.container {
+  width: 800px;
+  max-width: 80%;
+  border-radius: 6px;
+  background-color: rgb(0, 0, 0);
+  padding: 10px;
+  border: 5px solid #fff;
+  box-shadow: 0 0 20px 5px white;
+}
+/* .icon {
   display: flex;
   align-items: flex-end;
   flex-direction: column;
   font-size: 4rem;
   color: rgb(255, 0, 0);
+} */
+.answer-btn {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin: 20px 0;
+}
+.answer {
+  font-size: 3rem;
+  padding: 5px 10px;
+  background-color: #fff;
+  border:5px solid;
+}
+.next-btn {
+  font-size: 3rem;
+  background-color: #fff;
+}
+
+.answer:hover {
+  border-color:yellow;
+
+}
+
+.answer:focus {
+  outline: none;
+}
+
+.answer.wrong {
+  --check:var(--check-wrong);
+}
+.answer.correct {
+  --check:var(--check-correct);
+
 }
