@@ -19,8 +19,8 @@ html {
   in most browser configurations this will be 10px */
 :root {
   font-size: 62.5%;
-  --check-correct:lime;
-  --check-wrong: red;
+  --correct-color: lime;
+  --wrong-color: red;
 }
 
 body {
@@ -69,16 +69,31 @@ body {
   font-size: 3rem;
   padding: 5px 10px;
   background-color: #fff;
-  border:5px solid;
+  border: 5px solid;
+  cursor: pointer;
 }
 .next-btn {
-  font-size: 3rem;
+  font-size: 4rem;
   background-color: #fff;
+  cursor: pointer;
+  padding:5px 20px;
+  border: 5px solid;
+}
+.next-btn:focus{
+  outline: none;
+
+}
+.next-btn:hover {
+  border-color:yellow;
+}
+.button-container {
+  display:flex;
+  justify-content: center;
+  align-items:center;
 }
 
 .answer:hover {
-  border-color:yellow;
-
+  border-color: yellow;
 }
 
 .answer:focus {
@@ -86,9 +101,8 @@ body {
 }
 
 .answer.wrong {
-  --check:var(--check-wrong);
+  --background-color: var(--wrong-color);
 }
 .answer.correct {
-  --check:var(--check-correct);
-
+  --background-color: var(--correct-color);
 }
