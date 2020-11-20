@@ -1,6 +1,7 @@
 /*-------------------------------- Constants --------------------------------*/
 
 /*-------------------------------- Variables --------------------------------*/
+let currentQuestionIdx, randomQuestion;
 
 let questions = [
   {
@@ -95,23 +96,43 @@ let questions = [
   },
 ];
 /*------------------------ Cached Element References ------------------------*/
-const question = document.getElementById("question");
 const startBtn = document.getElementById("startBtn");
 const qBoxEl = document.getElementById("questionContainer");
+const questionEl = document.getElementById("question");
+const answerBtnEl = document.getElementById("answerBtn");
+const nextBtn = document.getElementById("nextBtn");
 /*----------------------------- Event Listeners -----------------------------*/
 startBtn.addEventListener("click", startQuiz);
 /*-------------------------------- Functions --------------------------------*/
 // Starts Quiz
 function startQuiz() {
   startBtn.classList.add("hide");
+  randomQuestion = questions.sort(() => Math.random() - 0.5);
+  currentQuestionIdx = 0;
   qBoxEl.classList.remove("hide");
   nextQuestion();
 }
-
+function setQuestion(show) {
+  questionEl.innerText = show.question;
+  question.answers.forEach(answer => {
+    const button = document.createElement("button");
+    button.innerText = answer.text;
+    button.classList.add("btn");
+    if (answer.correct) {
+      button.dataset.correct = answer.correct
+    }
+    button.addEventListener('click',answerChoice)
+    answerBtnEl.appendChild(button)
+  });
+}
 // Picks an answer
-function answerChoice() {}
+function answerChoice(e) {
+
+}
 // Continues to the next quesiton
-function nextQuestion() {}
+function nextQuestion() {
+  setQuestion(randomQuestion[currentQuestionIdx]);
+}
 
 //Psuedo code:
 // - Create an music ID icon button for music option
