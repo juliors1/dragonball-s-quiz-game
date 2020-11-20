@@ -14,75 +14,84 @@ let questions = [
   },
   {
     question: "Who is this character?",
-    answer1: "Pan",
-    answer2: "Jaco",
-    answer3: "Jiren",
-    answer4: "Whis",
-    answer: 3,
+    answers: [
+      { text: "Pan", correct: false },
+      { text: "Jaco", correct: false },
+      { text: "Jiren", correct: true },
+      { text: "Whis", correct: false },
+    ],
   },
   {
     question: "Who is this character?",
-    answer1: "Whis",
-    answer2: "Broly",
-    answer3: "Jiren",
-    answer4: "Master Roshi",
-    answer: 2,
+    answer: [
+      { text: "Whis", correct: false },
+      { text: "Broly", correct: true },
+      { text: "Jiren", correct: false },
+      { text: "Master Roshi", correct: false },
+    ],
   },
   {
     question: "Who is this character?",
-    answer1: "Raditz",
-    answer2: "Vegeta",
-    answer3: "Andriod 17",
-    answer4: "Cell",
-    answer: 2,
+    answers: [
+      { text: "Raditz", correct: false },
+      { text: "Vegeta", correct: true },
+      { text: "Andriod 17", correct: false },
+      { text: "Cell", correct: false },
+    ],
   },
   {
     question: "Who is this character?",
-    answer1: "Goten",
-    answer2: "Kid Buu",
-    answer3: "Jiren",
-    answer4: "Gohan",
-    answer: 4,
+    answers: [
+      { text: "Goten", correct: false },
+      { text: "Kid Buu", correct: false },
+      { text: "Jiren", correct: false },
+      { text: "Gohan", correct: true },
+    ],
   },
   {
     question: "Who is this character?",
-    answer1: "Frieza",
-    answer2: "Cooler",
-    answer3: "Freiza",
-    answer4: "Andriod 18",
-    answer: 1,
+    answers: [
+      { text: "Frieza", correct: true },
+      { text: "Cooler", correct: false },
+      { text: "Freiza", correct: false },
+      { text: "Andriod 18", correct: false },
+    ],
   },
   {
     question: "Who is the God of Destruction in the sixth universe?",
-    answer1: "Heles",
-    answer2: "Iwan",
-    answer3: "Sidra",
-    answer4: "Champa",
-    answer: 4,
+    answers: [
+      { text: "Heles", correct: false },
+      { text: "Iwan", correct: false },
+      { text: "Sidra", correct: false },
+      { text: "Champa", correct: true },
+    ],
   },
   {
     question: "Who is the God of Destruction in the seventh universe?",
-    answer1: "Quitela",
-    answer2: "Giin",
-    answer3: "Beerus",
-    answer4: "Sidra",
-    answer: 3,
+    answers: [
+      { text: "Quitela", correct: false },
+      { text: "Giin", correct: false },
+      { text: "Beerus", correct: true },
+      { text: "Sidra", correct: false },
+    ],
   },
   {
     question: "What is the name of Gohan's daughter",
-    answer1: "Bulla",
-    answer2: "Pan",
-    answer3: "Hailey",
-    answer4: "Dolly",
-    answer: 2,
+    answers: [
+      { text: "Bulla", correct: false },
+      { text: "Pan", correct: true },
+      { text: "Hailey", correct: false },
+      { text: "Dolly", correct: false },
+    ],
   },
   {
     question: "Who's the strongest character in Dragon Ball Super?",
-    answer1: "Vados",
-    answer2: "Whis",
-    answer3: "Grand Priest",
-    answer4: "Zeno",
-    answer: 4,
+    answers: [
+      { text: "Vados", correct: false },
+      { text: "Whis", correct: false },
+      { text: "Grand Priest", correct: false },
+      { text: "Zeno", correct: true },
+    ],
   },
 ];
 /*------------------------ Cached Element References ------------------------*/
@@ -103,13 +112,6 @@ function startQuiz() {
 function answerChoice() {}
 // Continues to the next quesiton
 function nextQuestion() {}
-
-
-
-
-
-
-
 
 //Psuedo code:
 // - Create an music ID icon button for music option
