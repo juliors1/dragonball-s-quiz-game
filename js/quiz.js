@@ -2,34 +2,33 @@
 
 /*-------------------------------- Variables --------------------------------*/
 let currentQuestionIdx, randomQuestion;
-
-let questions = [
+const questions = [
   {
     question: "Who is this character?",
     answers: [
       { text: "Goku", correct: true },
-      { text: "Vegeta", correct: false },
-      { text: "Goten", correct: false },
-      { text: "Trunks", correct: false },
-    ],
+      { text: "Krillin", correct: false },
+      { text: "Bardock", correct: false },
+      { text: "Trunks", correct: false }
+    ]
   },
   {
     question: "Who is this character?",
     answers: [
-      { text: "Pan", correct: false },
+      { text: "Monaka", correct: false },
       { text: "Jaco", correct: false },
       { text: "Jiren", correct: true },
-      { text: "Whis", correct: false },
-    ],
+      { text: "Tien", correct: false }
+    ]
   },
   {
     question: "Who is this character?",
-    answer: [
-      { text: "Whis", correct: false },
+    answers: [
+      { text: "Caulifla", correct: false },
       { text: "Broly", correct: true },
-      { text: "Jiren", correct: false },
-      { text: "Master Roshi", correct: false },
-    ],
+      { text: "Yamacha", correct: false },
+      { text: "Master Roshi", correct: false }
+    ]
   },
   {
     question: "Who is this character?",
@@ -37,17 +36,17 @@ let questions = [
       { text: "Raditz", correct: false },
       { text: "Vegeta", correct: true },
       { text: "Andriod 17", correct: false },
-      { text: "Cell", correct: false },
-    ],
+      { text: "Cell", correct: false }
+    ]
   },
   {
     question: "Who is this character?",
     answers: [
       { text: "Goten", correct: false },
       { text: "Kid Buu", correct: false },
-      { text: "Jiren", correct: false },
-      { text: "Gohan", correct: true },
-    ],
+      { text: "Majin Buu", correct: false },
+      { text: "Gohan", correct: true }
+    ]
   },
   {
     question: "Who is this character?",
@@ -55,8 +54,8 @@ let questions = [
       { text: "Frieza", correct: true },
       { text: "Cooler", correct: false },
       { text: "Freiza", correct: false },
-      { text: "Andriod 18", correct: false },
-    ],
+      { text: "Andriod 18", correct: false }
+    ]
   },
   {
     question: "Who is the God of Destruction in the sixth universe?",
@@ -64,8 +63,8 @@ let questions = [
       { text: "Heles", correct: false },
       { text: "Iwan", correct: false },
       { text: "Sidra", correct: false },
-      { text: "Champa", correct: true },
-    ],
+      { text: "Champa", correct: true }
+    ]
   },
   {
     question: "Who is the God of Destruction in the seventh universe?",
@@ -73,8 +72,8 @@ let questions = [
       { text: "Quitela", correct: false },
       { text: "Giin", correct: false },
       { text: "Beerus", correct: true },
-      { text: "Sidra", correct: false },
-    ],
+      { text: "Belmod", correct: false }
+    ]
   },
   {
     question: "What is the name of Gohan's daughter",
@@ -82,8 +81,8 @@ let questions = [
       { text: "Bulla", correct: false },
       { text: "Pan", correct: true },
       { text: "Hailey", correct: false },
-      { text: "Dolly", correct: false },
-    ],
+      { text: "Dolly", correct: false }
+    ]
   },
   {
     question: "Who's the strongest character in Dragon Ball Super?",
@@ -91,10 +90,10 @@ let questions = [
       { text: "Vados", correct: false },
       { text: "Whis", correct: false },
       { text: "Grand Priest", correct: false },
-      { text: "Zeno", correct: true },
-    ],
-  },
-];
+      { text: "Zeno", correct: true }
+    ]
+  }
+]
 /*------------------------ Cached Element References ------------------------*/
 const startBtn = document.getElementById("startBtn");
 const qBoxEl = document.getElementById("questionContainer");
