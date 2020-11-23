@@ -117,8 +117,8 @@ nextBtn.addEventListener("click", () => {
 /*-------------------------------- Functions --------------------------------*/
 // Starts Quiz
 function startQuiz() {
-  document.getElementById('answerBtn').classList.remove('no-click');
-
+  document.getElementById("answerBtn").classList.remove("no-click");
+  resultForm.classList.add('hide');
   startBtn.classList.add("hide");
   randomQuestion = questions.sort(() => Math.random() - 0.5);
   currentQuestionIdx = 0;
@@ -183,10 +183,12 @@ function answerChoices(answer) {
   // show results in span
   document.getElementById("correct-answers").innerHTML = result;
   document.getElementById("answer-percentage").innerHTML = (
-    (100 * result) /questions.length).toFixed(0);
+    (100 * result) /
+    questions.length
+  ).toFixed(0);
 
-     //prevent multiclicking
-  document.getElementById('answerBtn').classList.add('no-click');
+  //prevent multiclicking
+  document.getElementById("answerBtn").classList.add("no-click");
 }
 // Checks what class to add baised off it being correct or wrong
 function addAnswerClass(choice, correct) {

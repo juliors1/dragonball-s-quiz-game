@@ -53,6 +53,9 @@ body {
   color: red;
   margin-bottom: 10px;
 }
+#img-container {
+text-align: center;
+}
 #question {
   margin-bottom: 50px;
   font-weight: bold;
