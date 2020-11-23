@@ -1,6 +1,6 @@
 /*-------------------------------- Variables --------------------------------*/
 let currentQuestionIdx, randomQuestion;
-let result= 0;
+let result = 0;
 let currentQuestion = 1;
 /*-------------------------------Constants-----------------------------------*/
 
@@ -97,14 +97,13 @@ const questions = [
   },
 ];
 
-
-
 /*------------------------ Cached Element References ------------------------*/
 const startBtn = document.getElementById("startBtn");
 const qBoxEl = document.getElementById("questionContainer");
 const questionEl = document.getElementById("question");
 const answerBtnEl = document.getElementById("answerBtn");
 const nextBtn = document.getElementById("nextBtn");
+const resultForm = document.getElementById("result-form");
 /*----------------------------- Event Listeners -----------------------------*/
 startBtn.addEventListener("click", startQuiz);
 nextBtn.addEventListener("click", () => {
@@ -114,12 +113,17 @@ nextBtn.addEventListener("click", () => {
 /*-------------------------------- Functions --------------------------------*/
 // Starts Quiz
 function startQuiz() {
-  result = 0;
   startBtn.classList.add("hide");
   randomQuestion = questions.sort(() => Math.random() - 0.5);
   currentQuestionIdx = 0;
   qBoxEl.classList.remove("hide");
   nextQuestion();
+
+  currentQuestion = 1;
+  document.getElementById('current-question').innerHTML = currentQuestion;
+
+  result = 0;
+
 }
 // Continues to the next question
 function nextQuestion() {
@@ -179,7 +183,7 @@ function removeAnswerClass(choice) {
   choice.classList.remove("wrong");
 
   // counts result
-   if ((answerChoice.dataset = correct)) {
+  if ((answerChoice.dataset = correct)) {
     result++;
   }
   document.getElementById("correctAnswer").innerHTML = correctAnswer;
