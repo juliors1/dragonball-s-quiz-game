@@ -18,7 +18,17 @@
       <i id ="sound"class="fas fa-volume-up"></i>
     </div> -->
     <div class="container">
+      <form id="result-form" class="hide" action="">
+        <div class="result-container">
+          <h1 class="text main">Finished !</h1>
+          <div class="text">RESULTS:</div>
+          <div class="text">
+            <span id="correct-answers" class="amount">10</span> of <span id="total-questions" class="amount">amount of questions</span> (<span id="answer-percentage"></span>%)</div>
+          </div>
+        </div>
+      </form>
       <div id="questionContainer" class="hide">
+        <div class="question-number">Question # <span id="current-question">1</span> of <span id="total-questions2">10</span></div>
         <div class="question-text" id="question">Question:</div>
         <div id="answerBtn" class="answer-btn">
           <button class="answer">A</button>

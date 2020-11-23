@@ -1,5 +1,7 @@
 /*-------------------------------- Variables --------------------------------*/
 let currentQuestionIdx, randomQuestion;
+let result= 0;
+let currentQuestion = 1;
 /*-------------------------------Constants-----------------------------------*/
 
 const questions = [
@@ -94,6 +96,9 @@ const questions = [
     ],
   },
 ];
+
+
+
 /*------------------------ Cached Element References ------------------------*/
 const startBtn = document.getElementById("startBtn");
 const qBoxEl = document.getElementById("questionContainer");
@@ -109,6 +114,7 @@ nextBtn.addEventListener("click", () => {
 /*-------------------------------- Functions --------------------------------*/
 // Starts Quiz
 function startQuiz() {
+  result = 0;
   startBtn.classList.add("hide");
   randomQuestion = questions.sort(() => Math.random() - 0.5);
   currentQuestionIdx = 0;
@@ -162,10 +168,8 @@ function answerChoices(answer) {
 function addAnswerClass(choice, correct) {
   removeAnswerClass(choice);
   if (correct) {
-    console.log("win");
     choice.classList.add("correct");
   } else {
-    console.log("lost");
     choice.classList.add("wrong");
   }
 }
@@ -173,6 +177,12 @@ function addAnswerClass(choice, correct) {
 function removeAnswerClass(choice) {
   choice.classList.remove("correct");
   choice.classList.remove("wrong");
+
+  // counts result
+   if ((answerChoice.dataset = correct)) {
+    result++;
+  }
+  document.getElementById("correctAnswer").innerHTML = correctAnswer;
 }
 
 //Psuedo code:
