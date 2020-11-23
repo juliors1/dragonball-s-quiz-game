@@ -1,6 +1,6 @@
 /*-------------------------------- Variables --------------------------------*/
 let currentQuestionIdx, randomQuestion;
-let result = 0;
+let result = 0; // counts the correct answers
 let currentQuestion = 1;
 /*-------------------------------Constants-----------------------------------*/
 
@@ -124,8 +124,10 @@ function startQuiz() {
 
   currentQuestion = 1;
   document.getElementById('current-question').innerHTML = currentQuestion;
-
+// reset counter after the quiz started
   result = 0;
+  document.getElementById("total-questions2").innerHTML = questions.length;
+  document.getElementById('total-question').innerHTML = questions.length;
 
 }
 // Continues to the next question
@@ -170,6 +172,9 @@ function answerChoices(answer) {
     startBtn.innerText = "RESTART";
     startBtn.classList.remove("hide");
   }
+  if (answerChoice.dataset = correct) {
+    result++; // if answer is correct it will add one correct score to the results
+  }
 }
 // Checks what class to add baised off it being correct or wrong
 function addAnswerClass(choice, correct) {
@@ -185,11 +190,6 @@ function removeAnswerClass(choice) {
   choice.classList.remove("correct");
   choice.classList.remove("wrong");
 
-  // counts result
-  if ((answerChoice.dataset = correct)) {
-    result++;
-  }
-  document.getElementById("correctAnswer").innerHTML = correctAnswer;
 }
 
 //Psuedo code:
