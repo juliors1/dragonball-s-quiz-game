@@ -5,7 +5,7 @@
 <img src="https://i.imgur.com/mWav4Sg.png" alt ="title image" height = 150px/>
 
 ### Main Screen Image:
-<img src="https://i.imgur.com/LXIcbKF.png" alt ="title image" height = 150px/>
+<img src="https://i.imgur.com/LXIcbKF.png" alt ="main image" height = 150px/>
 
 ## Description:
 
@@ -13,7 +13,7 @@ This is my version of a Dragon Ball Super Quiz game. This game is a quiz to test
 
 ## Getting Started:
 
--(http://dbs-quiz-game.surge.sh/) This will prompt you to the deployed website where you can get started on the quiz.
+  <a href="http://dbs-quiz-game.surge.sh/">DBS QUIZ</a> - This will prompt you to the deployed website where you can get started on the quiz.
 
 ### Instructions:
 
