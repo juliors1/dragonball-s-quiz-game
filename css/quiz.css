@@ -41,10 +41,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.question-text {
-  font-size: 4rem;
-  color: #fff;
-}
 
 .container {
   width: 800px;
@@ -62,12 +58,35 @@ body {
   font-size: 4rem;
   color: rgb(255, 0, 0);
 } */
+.text-main {
+  font-size: 26px;
+  color: red;
+  margin-bottom: 10px;
+}
+.amount {
+  font-weight: bold;
+}
+.question-number {
+  margin-bottom:20px;
+  color:#FFF;
+  font-size:3rem;
+}
+.question-number::after {
+  content:'';
+  display:block;
+  width:100%;
+  border:1px solid #FFF;
+}
+#questionContainer {
+  margin-top:20px;
+}
 .answer-btn {
   display: grid;
   grid-template-columns: repeat(2, auto);
   gap: 10px;
   margin: 20px 0;
 }
+
 button.btn {
   font-size: 3rem;
   padding: 5px 5px;

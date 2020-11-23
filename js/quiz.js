@@ -107,12 +107,12 @@ const resultForm = document.getElementById("result-form");
 /*----------------------------- Event Listeners -----------------------------*/
 startBtn.addEventListener("click", startQuiz);
 nextBtn.addEventListener("click", () => {
-  document.getElementById('answerBtn').classList.remove('no-click');
+  document.getElementById("answerBtn").classList.remove("no-click");
   currentQuestionIdx++;
   nextQuestion();
 
   currentQuestion++;
-  document.getElementById('current-question').innerHTML = currentQuestion;
+  document.getElementById("current-question").innerHTML = currentQuestion;
 });
 /*-------------------------------- Functions --------------------------------*/
 // Starts Quiz
@@ -124,12 +124,11 @@ function startQuiz() {
   nextQuestion();
 
   currentQuestion = 1;
-  document.getElementById('current-question').innerHTML = currentQuestion;
-// reset counter after the quiz started
+  document.getElementById("current-question").innerHTML = currentQuestion;
+  // reset counter after the quiz started
   result = 0;
   document.getElementById("total-questions2").innerHTML = questions.length;
-  document.getElementById('total-question').innerHTML = questions.length;
-
+  document.getElementById("total-question").innerHTML = questions.length;
 }
 // Continues to the next question
 function nextQuestion() {
@@ -169,22 +168,25 @@ function answerChoices(answer) {
   if (randomQuestion.length > currentQuestionIdx + 1) {
     nextBtn.classList.remove("hide"); //removes the hide class from startBtn
   } else {
-    resultForm.classList.remove('hide'); //removes the hide class from resultForm
-    qBoxEl.classList.remove('hide');
+    resultForm.classList.remove("hide"); //removes the hide class from resultForm
+    qBoxEl.classList.remove("hide");
 
     startBtn.innerText = "RESTART";
     startBtn.classList.remove("hide"); // removes the hide class from startBtn
   }
-  if (answerChoice.dataset = correct) {
+  if ((answerChoice.dataset = correct)) {
     result++; // if answer is correct it will add one correct score to the results
   }
 
   // show results in span
-  document.getElementById('correct-answers').innerHTML = countRightAnswers;
-  document.getElementById('answer-percentage').innerHTML = ((100 * result) /questions.length).toFixed(0);
+  document.getElementById("correct-answers").innerHTML = countRightAnswers;
+  document.getElementById("answer-percentage").innerHTML = (
+    (100 * result) /
+    questions.length
+  ).toFixed(0);
 
   // prevent from clicking multiple times
-  document.getElementById('answerBtn').classList.add('no-click');
+  document.getElementById("answerBtn").classList.add("no-click");
 }
 // Checks what class to add baised off it being correct or wrong
 function addAnswerClass(choice, correct) {
@@ -199,24 +201,4 @@ function addAnswerClass(choice, correct) {
 function removeAnswerClass(choice) {
   choice.classList.remove("correct");
   choice.classList.remove("wrong");
-
 }
-
-//Psuedo code:
-// - Create an music ID icon button for music option
-// - Create an instruction ID icon button
-// - Provide a hint for the user
-// - Sound effect if he/she answered correct and wrong
-// - Provide a text showing the number of question they are currently at out of the total.
-// - If wrong show a description of every character or item and provide the wrong with an X icon colored red and the correct answer colored green.
-// - Prevent user from being able to answer the next question they have not answered the current one.
-// - If and else statement determining whether they have failed or not. A score of 6/10 and above is a pass and anything below is a fail.
-// - End function to display their result at the end of the quiz. If they failed game over music will go.
-// - If they score perfect provide a sound effect with and image saying "PERFECT".
-// - Retake Quiz: add icon button
-// - next question function
-
-//Objectives:
-// - Mobile friendly
-//  normal mode: provide images,easier questions and hints for them.
-//  hard mode: no hints, blacked out images, harder questions.
