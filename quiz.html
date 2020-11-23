@@ -4,12 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz</title>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
-      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
-      crossorigin="anonymous"
-    />
     <link rel="stylesheet" href="css/quiz.css" />
     <script defer src="js/quiz.js"></script>
   </head>
@@ -20,16 +14,17 @@
     <div class="container">
       <form id="result-form" class="hide" action="">
         <div class="result-container">
-          <div class="text text-main">Finished !</div>
-          <div class="text">RESULTS:</div>
+          <div class="modal-text modal-text-bigger">Finished !</div>
+          <div class="modal-text">RESULTS:</div>
 
-          <div class="text">
-            <span id="correct-answers" class="amount">10</span> of
+          <div class="modal-text">
+            <span id="correct-answers" class="amount">10</span> /
             <span id="total-questions" class="amount">amount of questions</span>
             (<span id="answer-percentage"></span>%)
           </div>
         </div>
       </form>
+
       <div id="questionContainer" class="hide">
         <div class="question-number">
           Question # <span id="current-question">1</span> of

@@ -19,10 +19,6 @@ html {
   in most browser configurations this will be 10px */
 :root {
   font-size: 62.5%;
-  --hue-background: 30;
-  --hue-correct: 470;
-  --hue-wrong: 0;
-
 }
 
 body {
@@ -51,17 +47,23 @@ body {
   border: 5px solid #fff;
   box-shadow: 0 0 20px 5px white;
 }
-/* .icon {
-  display: flex;
-  align-items: flex-end;
-  flex-direction: column;
-  font-size: 4rem;
-  color: rgb(255, 0, 0);
-} */
-.text-main {
+
+.modal-text-bigger {
   font-size: 26px;
   color: red;
   margin-bottom: 10px;
+}
+#question {
+  margin-bottom: 50px;
+  font-weight: bold;
+  line-height: 27px;
+  color:#FFF;
+  font-size:4rem;
+}
+
+.modal-text{
+  color:#FFF;
+  font-size:2rem;
 }
 .amount {
   font-weight: bold;
@@ -71,15 +73,18 @@ body {
   color:#FFF;
   font-size:3rem;
 }
+
 .question-number::after {
   content:'';
   display:block;
   width:100%;
   border:1px solid #FFF;
 }
+
 #questionContainer {
   margin-top:20px;
 }
+
 .answer-btn {
   display: grid;
   grid-template-columns: repeat(2, auto);
@@ -92,9 +97,6 @@ button.btn {
   padding: 5px 5px;
   border: 5px solid;
   cursor: pointer;
-  --hue: var(--hue-background);
-  background-color: hsl(var(--hue), 100%, 50%);
-
 }
 .next-btn, .start-btn{
   font-size: 4rem;
@@ -123,21 +125,25 @@ button.btn {
   align-items:center;
 }
 .btn.correct {
-  --hue: var(--hue-correct);
+ background-color:lime;
 }
 
 .btn.wrong {
-  --hue: var(--hue-wrong);
+  background-color:red;
 }
-.no-click {pointer-events: none;}
+
 button.btn:hover {
-  border-color: #fff;
+  border-color: red;
 }
 
 button.btn:focus {
   outline: none;
 }
+/*Prevent multiclicking the buttons*/
+.no-click {pointer-events: none;}
 
 .hide {
   display: none;
 }
+
+
