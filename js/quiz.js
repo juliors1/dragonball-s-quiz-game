@@ -162,16 +162,18 @@ function resetNextQuestion() {
 function answerChoices(answer) {
   const answerChoice = answer.target;
   const correct = answerChoice.dataset.correct;
-  addAnswerClass(document.body, correct);
   Array.from(answerBtnEl.children).forEach((button) => {
     addAnswerClass(button, button.dataset.correct);
   });
   // determines the end of questions to make the restart button display
   if (randomQuestion.length > currentQuestionIdx + 1) {
-    nextBtn.classList.remove("hide");
+    nextBtn.classList.remove("hide"); //removes the hide class from nextBtn
   } else {
+    resultForm.classList.remove('hide'); //removes the hide class from resultForm
+    qBoxEl.classList.remove('hide');
+
     startBtn.innerText = "RESTART";
-    startBtn.classList.remove("hide");
+    startBtn.classList.remove("hide"); // removes the hide class from startBtn
   }
   if (answerChoice.dataset = correct) {
     result++; // if answer is correct it will add one correct score to the results
