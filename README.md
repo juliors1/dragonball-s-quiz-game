@@ -13,7 +13,7 @@ This is my version of a Dragon Ball Super Quiz game. This game is a quiz to test
 
 ## Getting Started:
 
-  <a href="http://dbs-quiz-game.surge.sh/">DBS QUIZ</a> - This will prompt you to the deployed website where you can get started on the quiz.
+  <a href="http://dbs-quiz-game.surge.sh/" target="_blank">DBS QUIZ</a> - This will prompt you to the deployed website where you can get started on the quiz.
 
 ### Instructions:
 
