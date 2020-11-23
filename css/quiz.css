@@ -19,8 +19,6 @@ html {
   in most browser configurations this will be 10px */
 :root {
   font-size: 62.5%;
-  --hue-wrong: 0;
-  --hue-correct: 145;
 }
 
 body {
@@ -65,12 +63,13 @@ body {
   gap: 10px;
   margin: 20px 0;
 }
-.answer {
+button.btn {
   font-size: 3rem;
-  padding: 5px 10px;
+  padding: 5px 5px;
   background-color: #fff;
   border: 5px solid;
   cursor: pointer;
+
 }
 .next-btn, .start-btn{
   font-size: 4rem;
@@ -99,11 +98,11 @@ body {
   align-items:center;
 }
 
-.answer:hover {
+button.btn:hover {
   border-color: red;
 }
 
-.answer:focus {
+button.btn:focus {
   outline: none;
 }
 

@@ -1,17 +1,16 @@
-
 /*-------------------------------- Variables --------------------------------*/
 let currentQuestionIdx, randomQuestion;
- /*-------------------------------Constants-----------------------------------*/
+/*-------------------------------Constants-----------------------------------*/
 
- const questions = [
+const questions = [
   {
     question: "Who is this character?",
     answers: [
       { text: "Goku", correct: true },
       { text: "Krillin", correct: false },
       { text: "Bardock", correct: false },
-      { text: "Trunks", correct: false }
-    ]
+      { text: "Trunks", correct: false },
+    ],
   },
   {
     question: "Who is this character?",
@@ -19,8 +18,8 @@ let currentQuestionIdx, randomQuestion;
       { text: "Monaka", correct: false },
       { text: "Jaco", correct: false },
       { text: "Jiren", correct: true },
-      { text: "Tien", correct: false }
-    ]
+      { text: "Tien", correct: false },
+    ],
   },
   {
     question: "Who is this character?",
@@ -28,8 +27,8 @@ let currentQuestionIdx, randomQuestion;
       { text: "Caulifla", correct: false },
       { text: "Broly", correct: true },
       { text: "Yamacha", correct: false },
-      { text: "Master Roshi", correct: false }
-    ]
+      { text: "Master Roshi", correct: false },
+    ],
   },
   {
     question: "Who is this character?",
@@ -37,8 +36,8 @@ let currentQuestionIdx, randomQuestion;
       { text: "Raditz", correct: false },
       { text: "Vegeta", correct: true },
       { text: "Andriod 17", correct: false },
-      { text: "Cell", correct: false }
-    ]
+      { text: "Cell", correct: false },
+    ],
   },
   {
     question: "Who is this character?",
@@ -46,8 +45,8 @@ let currentQuestionIdx, randomQuestion;
       { text: "Goten", correct: false },
       { text: "Kid Buu", correct: false },
       { text: "Majin Buu", correct: false },
-      { text: "Gohan", correct: true }
-    ]
+      { text: "Gohan", correct: true },
+    ],
   },
   {
     question: "Who is this character?",
@@ -55,8 +54,8 @@ let currentQuestionIdx, randomQuestion;
       { text: "Frieza", correct: true },
       { text: "Cooler", correct: false },
       { text: "Freiza", correct: false },
-      { text: "Andriod 18", correct: false }
-    ]
+      { text: "Andriod 18", correct: false },
+    ],
   },
   {
     question: "Who is the God of Destruction in the sixth universe?",
@@ -64,8 +63,8 @@ let currentQuestionIdx, randomQuestion;
       { text: "Heles", correct: false },
       { text: "Iwan", correct: false },
       { text: "Sidra", correct: false },
-      { text: "Champa", correct: true }
-    ]
+      { text: "Champa", correct: true },
+    ],
   },
   {
     question: "Who is the God of Destruction in the seventh universe?",
@@ -73,8 +72,8 @@ let currentQuestionIdx, randomQuestion;
       { text: "Quitela", correct: false },
       { text: "Giin", correct: false },
       { text: "Beerus", correct: true },
-      { text: "Belmod", correct: false }
-    ]
+      { text: "Belmod", correct: false },
+    ],
   },
   {
     question: "What is the name of Gohan's daughter",
@@ -82,8 +81,8 @@ let currentQuestionIdx, randomQuestion;
       { text: "Bulla", correct: false },
       { text: "Pan", correct: true },
       { text: "Hailey", correct: false },
-      { text: "Dolly", correct: false }
-    ]
+      { text: "Dolly", correct: false },
+    ],
   },
   {
     question: "Who's the strongest character in Dragon Ball Super?",
@@ -91,10 +90,10 @@ let currentQuestionIdx, randomQuestion;
       { text: "Vados", correct: false },
       { text: "Whis", correct: false },
       { text: "Grand Priest", correct: false },
-      { text: "Zeno", correct: true }
-    ]
-  }
-]
+      { text: "Zeno", correct: true },
+    ],
+  },
+];
 /*------------------------ Cached Element References ------------------------*/
 const startBtn = document.getElementById("startBtn");
 const qBoxEl = document.getElementById("questionContainer");
@@ -112,29 +111,52 @@ function startQuiz() {
   qBoxEl.classList.remove("hide");
   nextQuestion();
 }
-// Continues to the next quesiton
+// Continues to the next question
 function nextQuestion() {
+  resetNextQuestion();
   setQuestion(randomQuestion[currentQuestionIdx]);
 }
-
+// Makes the questions appear
 function setQuestion(show) {
   questionEl.innerText = show.question;
-  show.answers.forEach(answer => {
+  show.answers.forEach((answer) => {
     const button = document.createElement("button");
     button.innerText = answer.text;
     button.classList.add("btn");
     if (answer.correct) {
-      button.dataset.correct = answer.correct
+      button.dataset.correct = answer.correct;
     }
-    button.addEventListener('click',answerChoice)
-    answerBtnEl.appendChild(button)
+    button.addEventListener("click", answerChoice);
+    answerBtnEl.appendChild(button);
   });
 }
-// Picks an answer
-function answerChoice(e) {
-
+//resets next question
+function resetNextQuestion() {
+  nextBtn.classList.add("hide");
+  while (answerBtnEl.firstChild) {
+    answerBtnEl.removeChild(answerBtnEl.firstChild);
+  }
 }
 
+// Picks an answer
+function answerChoices(answer) {
+  const answerChoice = answer.target;
+  const correct = answerChoice.dataset.correct;
+  Array.from(answerBtnEl.children).forEach((button) => {
+    checkAnswer(button, button.dataset.correct);
+  });
+
+  function checkAnswer(element, correct) {
+    clearChoice(element);
+    if (correct) {
+      element.classList.add("correct");
+    } else {
+      element.classList.add("wrong");
+    }
+  }
+
+
+}
 
 //Psuedo code:
 // - Create an music ID icon button for music option
@@ -153,4 +175,4 @@ function answerChoice(e) {
 //Objectives:
 // - Mobile friendly
 //  normal mode: provide images,easier questions and hints for them.
-//  hard mode: no hints, blacked out images, harder questions
+//  hard mode: no hints, blacked out images, harder questions.
