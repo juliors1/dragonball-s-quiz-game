@@ -129,6 +129,7 @@ button.btn {
 .btn.wrong {
   --hue: var(--hue-wrong);
 }
+.no-click {pointer-events: none;}
 button.btn:hover {
   border-color: #fff;
 }
