@@ -19,8 +19,8 @@ html {
   in most browser configurations this will be 10px */
 :root {
   font-size: 62.5%;
-  --correct-color: lime;
-  --wrong-color: red;
+  --hue-wrong: 0;
+  --hue-correct: 145;
 }
 
 body {
@@ -107,12 +107,6 @@ body {
   outline: none;
 }
 
-.answer.wrong {
-  --background-color: var(--wrong-color);
-}
-.answer.correct {
-  --background-color: var(--correct-color);
-}
 .hide {
   display: none;
 }

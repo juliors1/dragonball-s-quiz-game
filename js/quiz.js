@@ -1,8 +1,9 @@
-/*-------------------------------- Constants --------------------------------*/
 
 /*-------------------------------- Variables --------------------------------*/
 let currentQuestionIdx, randomQuestion;
-const questions = [
+ /*-------------------------------Constants-----------------------------------*/
+
+ const questions = [
   {
     question: "Who is this character?",
     answers: [
@@ -111,9 +112,14 @@ function startQuiz() {
   qBoxEl.classList.remove("hide");
   nextQuestion();
 }
+// Continues to the next quesiton
+function nextQuestion() {
+  setQuestion(randomQuestion[currentQuestionIdx]);
+}
+
 function setQuestion(show) {
   questionEl.innerText = show.question;
-  question.answers.forEach(answer => {
+  show.answers.forEach(answer => {
     const button = document.createElement("button");
     button.innerText = answer.text;
     button.classList.add("btn");
@@ -128,10 +134,7 @@ function setQuestion(show) {
 function answerChoice(e) {
 
 }
-// Continues to the next quesiton
-function nextQuestion() {
-  setQuestion(randomQuestion[currentQuestionIdx]);
-}
+
 
 //Psuedo code:
 // - Create an music ID icon button for music option
