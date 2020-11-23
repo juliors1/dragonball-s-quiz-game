@@ -167,7 +167,7 @@ function answerChoices(answer) {
   });
   // determines the end of questions to make the restart button display
   if (randomQuestion.length > currentQuestionIdx + 1) {
-    nextBtn.classList.remove("hide"); ?/removes the hide class from startBtn
+    nextBtn.classList.remove("hide"); //removes the hide class from startBtn
   } else {
     resultForm.classList.remove('hide'); //removes the hide class from resultForm
     qBoxEl.classList.remove('hide');
