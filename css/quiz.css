@@ -48,7 +48,7 @@ body {
   box-shadow: 0 0 20px 5px white;
 }
 
-.modal-text-bigger {
+.result-head {
   font-size: 26px;
   color: red;
   margin-bottom: 10px;
@@ -64,7 +64,7 @@ text-align: center;
   font-size:4rem;
 }
 
-.modal-text{
+.result-text{
   color:#FFF;
   font-size:3rem;
 }
