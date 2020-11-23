@@ -26,8 +26,8 @@ let currentQuestion = 1;
 /*-------------------------------Constants-----------------------------------*/
 
 const questions = [
-  {
-    question: "Who is this character?",
+  { image:"/images/goku.jpg",
+  question: "Who is this character?",
     answers: [
       { text: "Goku", correct: true },
       { text: "Krillin", correct: false },
@@ -35,10 +35,10 @@ const questions = [
       { text: "Trunks", correct: false },
     ],
   },
-  {
+  { image:"/images/jiren.jpg",
     question: "Who is this character?",
     answers: [
-      { text: "Monaka", correct: false },
+      { text: "Monaka", correct: false},
       { text: "Jaco", correct: false },
       { text: "Jiren", correct: true },
       { text: "Tien", correct: false },
@@ -46,6 +46,7 @@ const questions = [
   },
   {
     question: "Who is this character?",
+    image:"/images/broly.jpg",
     answers: [
       { text: "Caulifla", correct: false },
       { text: "Broly", correct: true },
@@ -53,7 +54,7 @@ const questions = [
       { text: "Master Roshi", correct: false },
     ],
   },
-  {
+  { image:"/images/vegeta.jpg",
     question: "Who is this character?",
     answers: [
       { text: "Raditz", correct: false },
@@ -64,6 +65,7 @@ const questions = [
   },
   {
     question: "Who is this character?",
+    image:"/images/gohan.jpeg",
     answers: [
       { text: "Goten", correct: false },
       { text: "Kid Buu", correct: false },
@@ -73,6 +75,7 @@ const questions = [
   },
   {
     question: "Who is this character?",
+    image:"/images/frieza.png",
     answers: [
       { text: "Frieza", correct: true },
       { text: "Cooler", correct: false },
@@ -82,6 +85,7 @@ const questions = [
   },
   {
     question: "Who is the God of Destruction in the sixth universe?",
+    image:"/images/champa.jpg",
     answers: [
       { text: "Heles", correct: false },
       { text: "Iwan", correct: false },
@@ -91,6 +95,7 @@ const questions = [
   },
   {
     question: "Who is the God of Destruction in the seventh universe?",
+    image:"/images/beerus.png",
     answers: [
       { text: "Quitela", correct: false },
       { text: "Giin", correct: false },
@@ -100,6 +105,7 @@ const questions = [
   },
   {
     question: "What is the name of Gohan's daughter",
+    image:"/images/pan.jpg",
     answers: [
       { text: "Bulla", correct: false },
       { text: "Pan", correct: true },
@@ -109,6 +115,7 @@ const questions = [
   },
   {
     question: "Who's the strongest character in Dragon Ball Super?",
+    image:"/images/zeno.png",
     answers: [
       { text: "Vados", correct: false },
       { text: "Whis", correct: false },
@@ -125,6 +132,7 @@ const questionEl = document.getElementById("question");
 const answerBtnEl = document.getElementById("answerBtn");
 const nextBtn = document.getElementById("nextBtn");
 const resultForm = document.getElementById("result-form");
+const image = document.getElementById("image");
 /*----------------------------- Event Listeners -----------------------------*/
 startBtn.addEventListener("click", startQuiz);
 nextBtn.addEventListener("click", () => {
@@ -153,11 +161,13 @@ function startQuiz() {
   document.getElementById("total-questions2").innerHTML = questions.length;
   document.getElementById("total-questions").innerHTML = questions.length;
 }
+
 // Continues to the next question
 function nextQuestion() {
   resetNextQuestion();
   displayQuestion(randomQuestion[currentQuestionIdx]);
 }
+
 // Makes the questions appear
 function displayQuestion(show) {
   questionEl.innerText = show.question;
@@ -170,6 +180,7 @@ function displayQuestion(show) {
     }
     button.addEventListener("click", answerChoices);
     answerBtnEl.appendChild(button);
+    image.src=`${show.image}`
   });
 }
 //resets next question

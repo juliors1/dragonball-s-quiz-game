@@ -12,7 +12,6 @@
 This is my version of a Dragon Ball Super Quiz game. This game is a quiz to test your knowledge on the characters and items in Dragon Ball Super. This game has audio when choosing the correct or wrong answer. It also includes a winner audio if you pass the quiz. This quiz consist of 10 questions and is randomized.The questions are randomized with 5 easy and 5 hard questions. You need a score of at least 6/10 to pass. I decided to make to this game because of how passionate I am and was as a child about Dragon Ball.
 
 ## Getting Started:
-
   <a href="http://dbs-quiz-game.surge.sh/" target="_blank">DBS QUIZ</a> - This will prompt you to the deployed website where you can get started on the quiz.
 
 ### Instructions:
