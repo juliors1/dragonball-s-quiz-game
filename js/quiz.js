@@ -180,6 +180,9 @@ function answerChoices(answer) {
   // show results in span
   document.getElementById('correct-answers').innerHTML = countRightAnswers;
   document.getElementById('answer-percentage').innerHTML = ((100 * result) /questions.length).toFixed(0);
+
+  // prevent from clicking multiple times
+  document.getElementById('answerBtn').classList.add('no-click');
 }
 // Checks what class to add baised off it being correct or wrong
 function addAnswerClass(choice, correct) {
