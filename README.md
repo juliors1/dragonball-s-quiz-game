@@ -4,7 +4,7 @@
 
 <img src="https://i.imgur.com/mWav4Sg.png" alt ="title image" height = 150px/>
 
-### Main Screen Image
+### Main Screen Image:
 <img src="https://i.imgur.com/LXIcbKF.png" alt ="title image" height = 150px/>
 
 ## Description:
