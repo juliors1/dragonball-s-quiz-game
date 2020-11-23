@@ -109,6 +109,9 @@ startBtn.addEventListener("click", startQuiz);
 nextBtn.addEventListener("click", () => {
   currentQuestionIdx++;
   nextQuestion();
+
+  currentQuestion++;
+  document.getElementById('current-question').innerHTML = currentQuestion;
 });
 /*-------------------------------- Functions --------------------------------*/
 // Starts Quiz
