@@ -107,6 +107,7 @@ const resultForm = document.getElementById("result-form");
 /*----------------------------- Event Listeners -----------------------------*/
 startBtn.addEventListener("click", startQuiz);
 nextBtn.addEventListener("click", () => {
+  document.getElementById('answerBtn').classList.remove('no-click');
   currentQuestionIdx++;
   nextQuestion();
 
@@ -175,6 +176,10 @@ function answerChoices(answer) {
   if (answerChoice.dataset = correct) {
     result++; // if answer is correct it will add one correct score to the results
   }
+
+  // show results in span
+  document.getElementById('correct-answers').innerHTML = countRightAnswers;
+  document.getElementById('answer-percentage').innerHTML = ((100 * result) /questions.length).toFixed(0);
 }
 // Checks what class to add baised off it being correct or wrong
 function addAnswerClass(choice, correct) {
