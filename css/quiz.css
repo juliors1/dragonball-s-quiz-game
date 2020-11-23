@@ -19,6 +19,10 @@ html {
   in most browser configurations this will be 10px */
 :root {
   font-size: 62.5%;
+  --hue-background: 30;
+  --hue-correct: 470;
+  --hue-wrong: 0;
+
 }
 
 body {
@@ -41,6 +45,7 @@ body {
   font-size: 4rem;
   color: #fff;
 }
+
 .container {
   width: 800px;
   max-width: 80%;
@@ -66,9 +71,10 @@ body {
 button.btn {
   font-size: 3rem;
   padding: 5px 5px;
-  background-color: #fff;
   border: 5px solid;
   cursor: pointer;
+  --hue: var(--hue-background);
+  background-color: hsl(var(--hue), 100%, 50%);
 
 }
 .next-btn, .start-btn{
@@ -97,9 +103,15 @@ button.btn {
   justify-content: center;
   align-items:center;
 }
+.btn.correct {
+  --hue: var(--hue-correct);
+}
 
+.btn.wrong {
+  --hue: var(--hue-wrong);
+}
 button.btn:hover {
-  border-color: red;
+  border-color: #fff;
 }
 
 button.btn:focus {

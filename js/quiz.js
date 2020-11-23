@@ -102,6 +102,10 @@ const answerBtnEl = document.getElementById("answerBtn");
 const nextBtn = document.getElementById("nextBtn");
 /*----------------------------- Event Listeners -----------------------------*/
 startBtn.addEventListener("click", startQuiz);
+nextBtn.addEventListener("click", () => {
+  currentQuestionIdx++;
+  nextQuestion();
+});
 /*-------------------------------- Functions --------------------------------*/
 // Starts Quiz
 function startQuiz() {
@@ -114,10 +118,10 @@ function startQuiz() {
 // Continues to the next question
 function nextQuestion() {
   resetNextQuestion();
-  setQuestion(randomQuestion[currentQuestionIdx]);
+  displayQuestion(randomQuestion[currentQuestionIdx]);
 }
 // Makes the questions appear
-function setQuestion(show) {
+function displayQuestion(show) {
   questionEl.innerText = show.question;
   show.answers.forEach((answer) => {
     const button = document.createElement("button");
@@ -126,7 +130,7 @@ function setQuestion(show) {
     if (answer.correct) {
       button.dataset.correct = answer.correct;
     }
-    button.addEventListener("click", answerChoice);
+    button.addEventListener("click", answerChoices);
     answerBtnEl.appendChild(button);
   });
 }
@@ -138,24 +142,37 @@ function resetNextQuestion() {
   }
 }
 
-// Picks an answer
+// Pick an answer
 function answerChoices(answer) {
   const answerChoice = answer.target;
   const correct = answerChoice.dataset.correct;
+  addAnswerClass(document.body, correct);
   Array.from(answerBtnEl.children).forEach((button) => {
-    checkAnswer(button, button.dataset.correct);
+    addAnswerClass(button, button.dataset.correct);
   });
-
-  function checkAnswer(element, correct) {
-    clearChoice(element);
-    if (correct) {
-      element.classList.add("correct");
-    } else {
-      element.classList.add("wrong");
-    }
+  // determines the end of questions to make the restart button display
+  if (randomQuestion.length > currentQuestionIdx + 1) {
+    nextBtn.classList.remove("hide");
+  } else {
+    startBtn.innerText = "RESTART";
+    startBtn.classList.remove("hide");
   }
-
-
+}
+// Checks what class to add baised off it being correct or wrong
+function addAnswerClass(choice, correct) {
+  removeAnswerClass(choice);
+  if (correct) {
+    console.log("win");
+    choice.classList.add("correct");
+  } else {
+    console.log("lost");
+    choice.classList.add("wrong");
+  }
+}
+// removes answer class
+function removeAnswerClass(choice) {
+  choice.classList.remove("correct");
+  choice.classList.remove("wrong");
 }
 
 //Psuedo code:
