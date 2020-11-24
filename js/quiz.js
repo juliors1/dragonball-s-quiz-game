@@ -60,7 +60,7 @@ const questions = [
   },
   {
     question: "Who is this character?",
-    image:"/images/gohan.jpeg",
+    image:"/images/gohan.png",
     answers: [
       { text: "Goten", correct: false },
       { text: "Kid Buu", correct: false },

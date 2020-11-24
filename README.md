@@ -13,7 +13,7 @@
 
 ## Description:
 
-This is my version of a Dragon Ball Super Quiz game. This game is a quiz to test your knowledge on the characters and items in Dragon Ball Super. This game has audio when choosing the correct or wrong answer. It also includes a winner audio if you pass the quiz. This quiz consist of 10 questions and is randomized.The questions are randomized with 5 easy and 5 hard questions. You need a score of at least 6/10 to pass. I decided to make to this game because of how passionate I am and was as a child about Dragon Ball.
+This is my version of a Dragon Ball Super Quiz game. This game is a quiz to test your knowledge on the characters in Dragon Ball Super. This game has audio when choosing an answer. It also includes a winner audio if you pass the quiz. This quiz consist of 10 questions and are randomized.The questions has 6 normal and 4 silhouette images. You need a score of at least 6/10 to pass. I decided to make to this game because of how passionate I am and was as a child about Dragon Ball.
 
 ## Getting Started:
 
@@ -21,7 +21,7 @@ This is my version of a Dragon Ball Super Quiz game. This game is a quiz to test
 
 ## Instructions:
 
-How to play: Answer the 10 questions about the characters and items. You must answer the current question you are on to move on to the next. The questions are randomized with 5 easy and 5 hard questions, so good luck!.
+How to play: Answer the 10 questions about the characters in Dragon Ball Super. You must answer the current question you are on to move on to the next. The questions are randomized with 6 normal and 4 silhouette images, so good luck!.
 
 ## Technologies Used:
 
@@ -36,4 +36,4 @@ How to play: Answer the 10 questions about the characters and items. You must an
 - [ ] animate title from left
 - [x] showing the percentage of your score
 - [x] randomize order
-- [ ] provide hints 
+- [ ] provide hints
