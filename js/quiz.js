@@ -21,8 +21,9 @@ let currentQuestion = 1;
 /*-------------------------------Constants-----------------------------------*/
 
 const questions = [
-  { image:"/images/goku.jpg",
-  question: "Who is this character?",
+  {
+    image: "/images/goku.jpg",
+    question: "Who is this character?",
     answers: [
       { text: "Goku", correct: true },
       { text: "Krillin", correct: false },
@@ -30,10 +31,11 @@ const questions = [
       { text: "Trunks", correct: false },
     ],
   },
-  { image:"/images/jiren.jpg",
+  {
+    image: "/images/jiren.jpg",
     question: "Who is this character?",
     answers: [
-      { text: "Monaka", correct: false},
+      { text: "Monaka", correct: false },
       { text: "Jaco", correct: false },
       { text: "Jiren", correct: true },
       { text: "Tien", correct: false },
@@ -41,7 +43,7 @@ const questions = [
   },
   {
     question: "Who is this character?",
-    image:"/images/broly.jpg",
+    image: "/images/broly.jpg",
     answers: [
       { text: "Caulifla", correct: false },
       { text: "Broly", correct: true },
@@ -49,7 +51,8 @@ const questions = [
       { text: "Master Roshi", correct: false },
     ],
   },
-  { image:"/images/vegeta.jpg",
+  {
+    image: "/images/vegeta.jpg",
     question: "Who is this character?",
     answers: [
       { text: "Raditz", correct: false },
@@ -60,7 +63,7 @@ const questions = [
   },
   {
     question: "Who is this character?",
-    image:"/images/gohan.png",
+    image: "/images/gohan.png",
     answers: [
       { text: "Goten", correct: false },
       { text: "Kid Buu", correct: false },
@@ -70,7 +73,7 @@ const questions = [
   },
   {
     question: "Who is this character?",
-    image:"/images/frieza.png",
+    image: "/images/frieza.png",
     answers: [
       { text: "Frieza", correct: true },
       { text: "Cooler", correct: false },
@@ -80,7 +83,7 @@ const questions = [
   },
   {
     question: "Who is the God of Destruction in the sixth universe?",
-    image:"/images/champa.jpg",
+    image: "/images/champa.jpg",
     answers: [
       { text: "Heles", correct: false },
       { text: "Iwan", correct: false },
@@ -90,7 +93,7 @@ const questions = [
   },
   {
     question: "Who is the God of Destruction in the seventh universe?",
-    image:"/images/beerus.png",
+    image: "/images/beerus.png",
     answers: [
       { text: "Quitela", correct: false },
       { text: "Giin", correct: false },
@@ -100,7 +103,7 @@ const questions = [
   },
   {
     question: "What is the name of Gohan's daughter",
-    image:"/images/pan.jpg",
+    image: "/images/pan.jpg",
     answers: [
       { text: "Bulla", correct: false },
       { text: "Pan", correct: true },
@@ -110,7 +113,7 @@ const questions = [
   },
   {
     question: "Who's the strongest character in Dragon Ball Super?",
-    image:"/images/zeno.png",
+    image: "/images/zeno.png",
     answers: [
       { text: "Vados", correct: false },
       { text: "Whis", correct: false },
@@ -142,63 +145,64 @@ nextBtn.addEventListener("click", () => {
 // Starts Quiz
 
 function startQuiz() {
-  let teleportAudio = new Audio(`/audio/dbz-teleport.mp3`)
-  teleportAudio.play();
-  teleportAudio.volume = .2;
+  let teleportAudio = new Audio(`/audio/dbz-teleport.mp3`);
+  teleportAudio.play(); //start and restart audio
+  teleportAudio.volume = 0.2;
   document.getElementById("answerBtn").classList.remove("no-click"); //removes the classList no-click
-  resultForm.classList.add("hide"); //hides resultform
-  startBtn.classList.add("hide"); // hides startBtn
-  randomQuestion = questions.sort(() => Math.random() - 0.5); // randomizes questions
-  currentQuestionIdx = 0;
-  qBoxEl.classList.remove("hide"); // removes the question container Element by adding the class hide, that is display: none; in css.
+  resultForm.classList.add("hide"); //hides resultform when game starts
+  startBtn.classList.add("hide"); // hides startBtn when game starts
+  randomQuestion = questions.sort(() => Math.random() - 0.5); // randomizes questions in array
+  currentQuestionIdx = 0; //first question from the randomQuestion array
+  qBoxEl.classList.remove("hide"); // removes the question container Element by removing the class hide, that is display: none; in css.
   nextQuestion();
 
-  currentQuestion = 1; // indicates what question to show when starting game in your result form
+  currentQuestion = 1; // indicates what question to show when starting game in your question container
   document.getElementById("current-question").innerHTML = currentQuestion;
   // reset counter after the quiz started
   result = 0;
 
-
-  document.getElementById("total-questions2").innerHTML = questions.length;
-  document.getElementById("total-questions").innerHTML = questions.length;
+  document.getElementById("total-questions2").innerHTML = questions.length; // 10
+  document.getElementById("total-questions").innerHTML = questions.length; //current
 }
 
 // Continues to the next question
 function nextQuestion() {
-  resetNextQuestion();
-  displayQuestion(randomQuestion[currentQuestionIdx]);
+  resetNextQuestion();  //reset the state of question
+  displayQuestion(randomQuestion[currentQuestionIdx]); // display the randomQuestion at the current idx
 }
 
 // Makes the questions appear
 function displayQuestion(show) {
-  questionEl.innerText = show.question;
-  show.answers.forEach((answer) => {
-    const button = document.createElement("button");
-    button.innerText = answer.text;
-    button.classList.add("btn");
-    if (answer.correct) {
-      button.dataset.correct = answer.correct;
+  questionEl.innerText = show.question; // question displays on screen using the innerText
+  show.answers.forEach((answer) => { // used a forEach to create new buttons
+    const button = document.createElement("button"); //creates button
+    button.innerText = answer.text; // generates the answers in the array into the new button
+    button.classList.add("btn"); // adds class btn to the new button
+    if (answer.correct) { //checks if answer is correct
+      button.dataset.correct = answer.correct;  // adds a dataAttribute into the button element
     }
-    button.addEventListener("click", answerChoices);
+    button.addEventListener("click", answerChoices); //event click for answer choice
+
     answerBtnEl.appendChild(button);
-    image.src=`${show.image}`
+
+    image.src = `${show.image}`; // allows me to have my images appear in my questions
   });
 }
 //resets next question
 
 function resetNextQuestion() {
-  nextBtn.classList.add("hide");
-  while (answerBtnEl.firstChild) {
-    answerBtnEl.removeChild(answerBtnEl.firstChild);
+  nextBtn.classList.add("hide"); // hides the next Btn after every turn until u answer
+  while (answerBtnEl.firstChild) {  //
+    answerBtnEl.removeChild(answerBtnEl.firstChild); //loops through all the children for the answerBtn element so it can remove it.
   }
 }
 
-// Pick an answer
+// selects an answer
 function answerChoices(answer) {
-  const answerChoice = answer.target;
-  const correct = answerChoice.dataset.correct;
-  Array.from(answerBtnEl.children).forEach((button) => {
-    addAnswerClass(button, button.dataset.correct);
+  const answerChoice = answer.target; // targets the answer button u clicked on
+  const correct = answerChoice.dataset.correct; // check if it equals the correct dataset
+  Array.from(answerBtnEl.children).forEach((button) => { // convert to an array because answerBtnEl.children is a live collection and is not an array so it updates on its own, so we can use a forEach.
+    addAnswerClass(button, button.dataset.correct); // for each button check if button dataset is correct
   });
 
   // determines the end of questions to make the restart button display / end quiz
@@ -209,24 +213,23 @@ function answerChoices(answer) {
     resultForm.classList.remove("hide"); //removes the hide class from resultForm
     qBoxEl.classList.remove("hide");
     confetti.start(10000);
-    let winnerAudio = new Audio(`/audio/winner.mp3`)
+    let winnerAudio = new Audio(`/audio/winner.mp3`); // winner audio
     winnerAudio.play();
-    winnerAudio.volume = .1;
-    startBtn.innerText = "RESTART";
+    winnerAudio.volume = 0.1;
+    startBtn.innerText = "RESTART"; // changes the startBtn into RESTART
     startBtn.classList.remove("hide"); // removes the hide class from startBtn
   }
 
   if ((answerChoice.dataset = correct)) {
-
     result++; // if answer is correct it will add one correct score to the results
   }
 
-  // show results in span
+  // show results in result form
 
-  document.getElementById("correct-answers").innerHTML = result;
+  document.getElementById("correct-answers").innerHTML = result; // displays the correct answer of result
 
   document.getElementById("answer-percentage").innerHTML = (
-    (100 * result) /
+    (100 * result) /   // turns a fraction into a percentage
     questions.length
   ).toFixed(0);
 
@@ -240,18 +243,17 @@ function answerChoices(answer) {
 function addAnswerClass(choice, correct) {
   removeAnswerClass(choice);
   if (correct) {
-    choice.classList.add("correct");
-    let answerAudio = new Audio(`/audio/answer-button.mp3`)
+    choice.classList.add("correct"); // shows class for the correct answer button (lime)
+    let answerAudio = new Audio(`/audio/answer-button.mp3`); //answer button audio
     answerAudio.play();
-    answerAudio.volume = .1;
+    answerAudio.volume = 0.1;
   } else {
-    choice.classList.add("wrong");
-
+    choice.classList.add("wrong"); //shows class for the wrong answer button (red)
   }
 }
 // removes answer class
 
 function removeAnswerClass(choice) {
-  choice.classList.remove("correct");
+  choice.classList.remove("correct"); //removes the class of correct and wrong in answer
   choice.classList.remove("wrong");
 }
