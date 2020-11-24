@@ -150,7 +150,7 @@ button.btn:focus {
   display: none;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 500px) {
   button.btn {
     font-size: 2rem;
   }
