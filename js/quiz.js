@@ -185,8 +185,8 @@ function displayQuestion(show) {
 
     answerBtnEl.appendChild(button);
 
-    image.src = `${show.image}`; // allows me to have my images appear in my questions
   });
+  image.src = `${show.image}`; // allows me to have my images appear in my questions
 }
 //resets next question
 
