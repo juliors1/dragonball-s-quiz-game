@@ -1,23 +1,18 @@
 //Psuedo code:
+//---------------------------------
 // - Create the structure of the home page:
-// - Create id container for the title (Use Sayian Font)
-// - Create an music ID icon button for music option
-// - Create an instruction ID icon button
-// - Provide a hint for the user
 // - Sound effect if he/she answered correct and wrong
 // - Provide a text showing the number of question they are currently at out of the total.
-// - If wrong show a description of every character or item and provide the wrong with an X icon colored red and the correct answer colored green.
 // - Prevent user from being able to answer the next question they have not answered the current one.
-// - If and else statement determining whether they have failed or not. A score of 7/10 and above is a pass and anything below is a fail.
+// - If and else statement determining whether they have failed or not. A score of 6/10 and above is a pass and anything below is a fail.
 // - End function to display their result at the end of the quiz. If they failed game over music will go.
 // - If they score perfect provide a sound effect with and image saying "PERFECT".
 // - Create the structure of the home page:
-// - Create id container for the title (Use Sayian Font)
-// - Create sound id to have the option of audio or not
-// - create an instruction ID icon button
 // - Have the answers as multiple choice buttons for them to choose from.
 // - Create an array of characters and an array of items.
-// - Retake Quiz: add icon button
+// - confetti
+// - add percentage score
+// - Restart Quiz: add icon button
 
 /*-------------------------------- Variables --------------------------------*/
 let currentQuestionIdx, randomQuestion;
@@ -146,9 +141,9 @@ nextBtn.addEventListener("click", () => {
 /*-------------------------------- Functions --------------------------------*/
 // Starts Quiz
 function startQuiz() {
-  let soundEffects = new Audio(`/audio/dbz-teleport.mp3`)
-  soundEffects.play();
-  soundEffects.volume = .2;
+  let teleportAudio = new Audio(`/audio/dbz-teleport.mp3`)
+  teleportAudio.play();
+  teleportAudio.volume = .2;
   document.getElementById("answerBtn").classList.remove("no-click");
   resultForm.classList.add("hide");
   startBtn.classList.add("hide");
@@ -208,9 +203,9 @@ function answerChoices(answer) {
     resultForm.classList.remove("hide"); //removes the hide class from resultForm
     qBoxEl.classList.remove("hide");
     confetti.start(10000);
-    let soundEffects = new Audio(`/audio/winner.mp3`)
-    soundEffects.play();
-    soundEffects.volume = .1;
+    let winnerAudio = new Audio(`/audio/winner.mp3`)
+    winnerAudio.play();
+    winnerAudio.volume = .1;
     startBtn.innerText = "RESTART";
     startBtn.classList.remove("hide"); // removes the hide class from startBtn
   }
@@ -233,14 +228,12 @@ function addAnswerClass(choice, correct) {
   removeAnswerClass(choice);
   if (correct) {
     choice.classList.add("correct");
-    let soundEffects = new Audio(`/audio/correct.mp3`)
-    soundEffects.play();
-    soundEffects.volume = .2;
+    let answerAudio = new Audio(`/audio/answer-button.mp3`)
+    answerAudio.play();
+    answerAudio.volume = .1;
   } else {
     choice.classList.add("wrong");
-    let soundEffects = new Audio(`/audio/wrong.mp3`)
-    soundEffects.play();
-    soundEffects.volume = .1;
+
   }
 }
 // removes answer class

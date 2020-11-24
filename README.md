@@ -19,7 +19,7 @@ This is my version of a Dragon Ball Super Quiz game. This game is a quiz to test
 
 <a href="http://dbs-quiz-game.surge.sh/" target="_blank">DBS QUIZ</a> - This will prompt you to the deployed website where you can get started on the quiz.
 
-### Instructions:
+## Instructions:
 
 How to play: Answer the 10 questions about the characters and items. You must answer the current question you are on to move on to the next. The questions are randomized with 5 easy and 5 hard questions, so good luck!.
 
