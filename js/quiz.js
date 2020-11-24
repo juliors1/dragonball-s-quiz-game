@@ -140,22 +140,25 @@ nextBtn.addEventListener("click", () => {
 });
 /*-------------------------------- Functions --------------------------------*/
 // Starts Quiz
+
 function startQuiz() {
   let teleportAudio = new Audio(`/audio/dbz-teleport.mp3`)
   teleportAudio.play();
   teleportAudio.volume = .2;
-  document.getElementById("answerBtn").classList.remove("no-click");
-  resultForm.classList.add("hide");
-  startBtn.classList.add("hide");
-  randomQuestion = questions.sort(() => Math.random() - 0.5);
+  document.getElementById("answerBtn").classList.remove("no-click"); //removes the classList no-click
+  resultForm.classList.add("hide"); //hides resultform
+  startBtn.classList.add("hide"); // hides startBtn
+  randomQuestion = questions.sort(() => Math.random() - 0.5); // randomizes questions
   currentQuestionIdx = 0;
-  qBoxEl.classList.remove("hide");
+  qBoxEl.classList.remove("hide"); // removes the question container Element by adding the class hide, that is display: none; in css.
   nextQuestion();
 
-  currentQuestion = 1;
+  currentQuestion = 1; // indicates what question to show when starting game in your result form
   document.getElementById("current-question").innerHTML = currentQuestion;
   // reset counter after the quiz started
   result = 0;
+
+
   document.getElementById("total-questions2").innerHTML = questions.length;
   document.getElementById("total-questions").innerHTML = questions.length;
 }
@@ -182,6 +185,7 @@ function displayQuestion(show) {
   });
 }
 //resets next question
+
 function resetNextQuestion() {
   nextBtn.classList.add("hide");
   while (answerBtnEl.firstChild) {
@@ -196,7 +200,9 @@ function answerChoices(answer) {
   Array.from(answerBtnEl.children).forEach((button) => {
     addAnswerClass(button, button.dataset.correct);
   });
+
   // determines the end of questions to make the restart button display / end quiz
+
   if (randomQuestion.length > currentQuestionIdx + 1) {
     nextBtn.classList.remove("hide"); //removes the hide class from startBtn
   } else {
@@ -209,21 +215,28 @@ function answerChoices(answer) {
     startBtn.innerText = "RESTART";
     startBtn.classList.remove("hide"); // removes the hide class from startBtn
   }
+
   if ((answerChoice.dataset = correct)) {
+
     result++; // if answer is correct it will add one correct score to the results
   }
 
   // show results in span
+
   document.getElementById("correct-answers").innerHTML = result;
+
   document.getElementById("answer-percentage").innerHTML = (
     (100 * result) /
     questions.length
   ).toFixed(0);
 
   //prevent multiclicking
+
   document.getElementById("answerBtn").classList.add("no-click");
 }
+
 // Checks what class to add baised off it being correct or wrong
+
 function addAnswerClass(choice, correct) {
   removeAnswerClass(choice);
   if (correct) {
@@ -237,6 +250,7 @@ function addAnswerClass(choice, correct) {
   }
 }
 // removes answer class
+
 function removeAnswerClass(choice) {
   choice.classList.remove("correct");
   choice.classList.remove("wrong");
