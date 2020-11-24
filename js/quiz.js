@@ -146,6 +146,9 @@ nextBtn.addEventListener("click", () => {
 /*-------------------------------- Functions --------------------------------*/
 // Starts Quiz
 function startQuiz() {
+  let soundEffects = new Audio(`/audio/dbz-teleport.mp3`)
+  soundEffects.play();
+  soundEffects.volume = .4;
   document.getElementById("answerBtn").classList.remove("no-click");
   resultForm.classList.add("hide");
   startBtn.classList.add("hide");
@@ -198,13 +201,16 @@ function answerChoices(answer) {
   Array.from(answerBtnEl.children).forEach((button) => {
     addAnswerClass(button, button.dataset.correct);
   });
-  // determines the end of questions to make the restart button display
+  // determines the end of questions to make the restart button display / end quiz
   if (randomQuestion.length > currentQuestionIdx + 1) {
     nextBtn.classList.remove("hide"); //removes the hide class from startBtn
   } else {
     resultForm.classList.remove("hide"); //removes the hide class from resultForm
     qBoxEl.classList.remove("hide");
-
+    confetti.start(7000);
+    let soundEffects = new Audio(`/audio/winner.mp3`)
+    soundEffects.play();
+    soundEffects.volume = .1;
     startBtn.innerText = "RESTART";
     startBtn.classList.remove("hide"); // removes the hide class from startBtn
   }
