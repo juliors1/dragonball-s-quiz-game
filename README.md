@@ -31,7 +31,7 @@ How to play: Answer the 10 questions about the characters and items. You must an
 
 ## Next Steps:
 
-- [ ] add sound
+- [x] add sound
 - [ ] mobile friendly
 - [ ] animate title from left
 - [x] showing the percentage of your score
