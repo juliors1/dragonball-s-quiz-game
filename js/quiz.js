@@ -148,7 +148,7 @@ nextBtn.addEventListener("click", () => {
 function startQuiz() {
   let soundEffects = new Audio(`/audio/dbz-teleport.mp3`)
   soundEffects.play();
-  soundEffects.volume = .4;
+  soundEffects.volume = .2;
   document.getElementById("answerBtn").classList.remove("no-click");
   resultForm.classList.add("hide");
   startBtn.classList.add("hide");
@@ -207,7 +207,7 @@ function answerChoices(answer) {
   } else {
     resultForm.classList.remove("hide"); //removes the hide class from resultForm
     qBoxEl.classList.remove("hide");
-    confetti.start(7000);
+    confetti.start(10000);
     let soundEffects = new Audio(`/audio/winner.mp3`)
     soundEffects.play();
     soundEffects.volume = .1;
@@ -233,8 +233,14 @@ function addAnswerClass(choice, correct) {
   removeAnswerClass(choice);
   if (correct) {
     choice.classList.add("correct");
+    let soundEffects = new Audio(`/audio/correct.mp3`)
+    soundEffects.play();
+    soundEffects.volume = .2;
   } else {
     choice.classList.add("wrong");
+    let soundEffects = new Audio(`/audio/wrong.mp3`)
+    soundEffects.play();
+    soundEffects.volume = .1;
   }
 }
 // removes answer class
