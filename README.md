@@ -36,4 +36,4 @@ How to play: Answer the 10 questions about the characters and items. You must an
 - [ ] animate title from left
 - [x] showing the percentage of your score
 - [x] randomize order
-- [ ] provide hints
+- [ ] provide hints 
