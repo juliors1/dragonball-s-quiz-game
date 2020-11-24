@@ -41,6 +41,6 @@ How to play: Answer the 10 questions about the characters in Dragon Ball Super. 
 ## Attributions:
 
 #### While the below disclaimers are technically required by their license-holders I would like to also sincerely thank all the creators whose work makes this site look great. I do not own or am associated with the resources used in any way, Thank you!
--  The awesome sound effects you hear on my website is from --> <a href="https://www.myinstants.com/search/?name=dragon%20ball" target="_blank">Sound Effects</a>
-- The cool font I used on my website is from ---><a href="https://fonts.google.com/specimen/Goldman#license" target="_blank">Font</a>
+-  The awesome sound effects you hear on my website came from --> <a href="https://www.myinstants.com/search/?name=dragon%20ball" target="_blank">Sound Effects</a>
+- The cool font I used on my website came from ---><a href="https://fonts.google.com/specimen/Goldman#license" target="_blank">Font</a>
 - Google Images
