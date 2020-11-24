@@ -34,8 +34,7 @@ How to play: Answer the 10 questions about the characters in Dragon Ball Super. 
 ## Next Steps:
 
 - [x] add sound
-- [ ] mobile friendly
-- [ ] animate title from left
+- [x] mobile friendly
 - [x] showing the percentage of your score
 - [x] randomize order
 - [ ] provide hints

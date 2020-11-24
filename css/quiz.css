@@ -50,42 +50,42 @@ body {
 
 .result-head {
   font-size: 26px;
-  color: #FFF;
+  color: #fff;
   margin-bottom: 10px;
 }
 #img-container {
-text-align: center;
+  text-align: center;
 }
 #question {
   margin-bottom: 50px;
   font-weight: bold;
   line-height: 30px;
-  color:#FFF;
-  font-size:4rem;
+  color: #fff;
+  font-size: 4rem;
 }
 
-.result-text{
-  color:#FFF;
-  font-size:3rem;
+.result-text {
+  color: #fff;
+  font-size: 3rem;
 }
 .amount {
   font-weight: bold;
 }
 .question-number {
-  margin-bottom:20px;
-  color:#FFF;
-  font-size:3rem;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 3rem;
 }
 
 .question-number::after {
-  content:'';
-  display:block;
-  width:100%;
-  border:1px solid #FFF;
+  content: "";
+  display: block;
+  width: 100%;
+  border: 1px solid #fff;
 }
 
 #questionContainer {
-  margin-top:20px;
+  margin-top: 20px;
 }
 
 .answer-btn {
@@ -101,38 +101,37 @@ button.btn {
   border: 5px solid;
   cursor: pointer;
 }
-.next-btn, .start-btn{
+.next-btn,
+.start-btn {
   font-size: 4rem;
   background-color: #fff;
   cursor: pointer;
-  padding:5px 20px;
+  padding: 5px 20px;
   border: 5px solid;
 }
-.next-btn:focus{
+.next-btn:focus {
   outline: none;
-
 }
 .next-btn:hover {
-  border-color:red;
+  border-color: red;
 }
-.start-btn:focus{
+.start-btn:focus {
   outline: none;
-
 }
 .start-btn:hover {
-  border-color:red;
+  border-color: red;
 }
 .button-container {
-  display:flex;
+  display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
 }
 .btn.correct {
- background-color:lime;
+  background-color: lime;
 }
 
 .btn.wrong {
-  background-color:red;
+  background-color: red;
 }
 
 button.btn:hover {
@@ -143,10 +142,22 @@ button.btn:focus {
   outline: none;
 }
 /*Prevent multiclicking the buttons*/
-.no-click {pointer-events: none;}
+.no-click {
+  pointer-events: none;
+}
 
 .hide {
   display: none;
 }
 
-
+@media screen and (max-width: 375px) {
+  button.btn {
+    font-size: 2rem;
+  }
+  #question.question-text {
+    font-size: 3rem;
+  }
+  #startBtn.start-btn {
+    font-size: 3rem;
+  }
+}

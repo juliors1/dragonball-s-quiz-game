@@ -76,3 +76,13 @@ button:focus {
 
 
 
+@media screen and (max-width: 375px) {
+  h1 {
+
+      font-size: 4rem;
+
+  }
+  .title {
+    top:500px;
+  }
+}
