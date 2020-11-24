@@ -134,7 +134,7 @@ const image = document.getElementById("image");
 /*----------------------------- Event Listeners -----------------------------*/
 startBtn.addEventListener("click", startQuiz);
 nextBtn.addEventListener("click", () => {
-  document.getElementById("answerBtn").classList.remove("no-click");
+  document.getElementById("answerBtn").classList.remove("no-click"); // removes the noclick
   currentQuestionIdx++;
   nextQuestion();
 
