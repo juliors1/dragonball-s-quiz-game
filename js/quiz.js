@@ -1,18 +1,3 @@
-//Psuedo code:
-//---------------------------------
-// - Create the structure of the home page:
-// - Sound effect if he/she answered correct and wrong
-// - Provide a text showing the number of question they are currently at out of the total.
-// - Prevent user from being able to answer the next question they have not answered the current one.
-// - If and else statement determining whether they have failed or not. A score of 6/10 and above is a pass and anything below is a fail.
-// - End function to display their result at the end of the quiz. If they failed game over music will go.
-// - If they score perfect provide a sound effect with and image saying "PERFECT".
-// - Create the structure of the home page:
-// - Have the answers as multiple choice buttons for them to choose from.
-// - Create an array of characters and an array of items.
-// - confetti
-// - add percentage score
-// - Restart Quiz: add icon button
 
 /*-------------------------------- Variables --------------------------------*/
 let currentQuestionIdx, randomQuestion;
