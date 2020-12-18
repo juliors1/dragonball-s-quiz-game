@@ -27,7 +27,7 @@ How to play: Answer the 10 questions about the characters in Dragon Ball Super. 
 
 - HTML
 - CSS
-- Javascript
+- JavaScript
 
  <img src="https://miro.medium.com/max/5120/1*l4xICbIIYlz1OTymWCoUTw.jpeg" height = 100px/>
 
